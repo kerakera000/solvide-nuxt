@@ -1,0 +1,163 @@
+@use "../../../../foundation/base/f-font-family" as font;
+@use "../../../../foundation/class-mixin/f-newbutton" as newbutton;
+@use "../../../../foundation/mixin/f-flex" as flex;
+
+.nkv{
+    width: 100vw;
+    height: 100vh;
+    margin: 0rem calc(50% - 50vw) 0;
+    position: relative;
+    @include flex.flex($align-items:flex-end,$justify-content:flex-end);
+    @include newbutton.Newbutton;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        @include flex.flex($align-items:flex-start,$justify-content:flex-start);
+    }
+    &__text-box{
+        width: 41%;
+        height: 100%;
+        @include flex.flex($align-items:flex-start,$justify-content:flex-end);
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+        padding-bottom: 4%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 82%;
+            padding-left: 5%;
+            justify-content: flex-end;
+        }
+        &--subtext{
+            width: 100%;
+            height: auto;
+            @include flex.flex($justify-content:flex-start);
+            p{
+                @include font.font-Notosan-Medium($fontsize:3rem);
+            }
+        }
+        &--title{
+            width: 100%;
+            height: auto;
+            @include flex.flex($justify-content:flex-start);
+            h2{
+                flex-direction: column;
+                text-shadow: 0px 6px 6px #0000001A;
+                @include font.font-Oswald-Bold($fontsize:7rem,$letterSpacing:2.4px,$lineHeight:8.8rem);
+                @media screen and (max-width: 768px) {
+                    line-height: 12rem;
+                    font-size: 10rem;
+                }
+            }
+        }
+    }
+    &__scroll{
+        width: 14rem;
+        height: auto;
+        position: absolute;
+        left: 5%;
+        bottom: 4%;
+        @include flex.flex($gap:10px);
+        flex-direction: column;
+        @media screen and (max-width: 768px) {
+            width: 24rem;
+            left: 70%;
+            bottom: 16%;
+        }
+        &--img{
+            width: 7rem;
+            height: 7rem;
+            @media screen and (max-width: 768px) {
+                width: 10rem;
+                height: 10rem;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        p{
+            width: auto;
+            color: white;
+            @include font.font-Oswald-Medium($fontsize:1.4rem,$letterSpacing:1.2px);
+        }
+    }
+}
+.nkv-parallax-bg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent linear-gradient(117deg, #8524D9 0%, #C348FA 45%, #31C4E6 100%) 0% 0% no-repeat padding-box;
+    @media screen and (max-width: 768px) {
+        background: transparent linear-gradient(150deg, #8524D9 0%, #C348FA 45%, #31C4E6 100%) 0% 0% no-repeat padding-box;
+    }
+    &__cnt{
+        width: 100%;
+        height: 100%;
+        background-image: url(/assets/new-solvide-images/home-images/kv-images/kv-main.png);
+        background-repeat: no-repeat;
+        background-position: 10% 38%;
+        background-size: 53%;
+        position: relative;
+        overflow: hidden;
+        @media screen and (max-width: 768px) {
+            background-position: 50% 30%;
+            background-size: 96%;
+        }
+        &--ball1{
+            width: 83rem;
+            height: 83rem;
+            border-radius: 50%;
+            background: transparent radial-gradient(closest-side at 50% 50%, #CF9CF0 0%, #B047E8 100%) 0% 0% no-repeat padding-box;
+            position: absolute;
+            z-index: -1;
+            top: -30%;
+            left: -15%;
+            filter:blur(1px);
+            @media screen and (max-width: 768px) {
+                top: -13%;
+                left: -29%;
+                background: transparent radial-gradient(closest-side at 50% 50%, #CF9CF0 0%, #A13BD8 100%) 0% 0% no-repeat padding-box;
+            }
+        }
+        &--ball2{
+            width: 38rem;
+            height: 38rem;
+            border-radius: 50%;
+            background: transparent radial-gradient(closest-side at 50% 50%, #B47AF7 0%, #9248F5 100%, #A354F1 100%) 0% 0% no-repeat padding-box;
+            position: absolute;
+            z-index: -1;
+            top: 20%;
+            left: 46%;
+            filter:blur(1px);
+            @media screen and (max-width: 768px) {
+                width: 27rem;
+                height: 27rem;
+                top: 24%;
+                left: 70%;
+                filter:blur(0px);
+                background: transparent radial-gradient(closest-side at 50% 50%, #B47AF7 0%, #7F25CC 100%, #A354F1 100%) 0% 0% no-repeat padding-box;
+            }
+        }
+        &--ball3{
+            width: 38rem;
+            height: 38rem;
+            border-radius: 50%;
+            background: transparent radial-gradient(closest-side at 50% 50%, #DEAAFF 0%, #B054F1 100%) 0% 0% no-repeat padding-box;
+            position: absolute;
+            z-index: -1;
+            top: 73%;
+            left: 17%;
+            filter:blur(1px);
+            @media screen and (max-width: 768px) {
+                top: 70%;
+                left: -6%;
+                background: transparent radial-gradient(closest-side at 50% 50%, #9CBCFD 0%, #648EED 100%) 0% 0% no-repeat padding-box;
+            }
+        }
+    }
+}

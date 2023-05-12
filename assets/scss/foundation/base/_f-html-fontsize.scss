@@ -1,0 +1,87 @@
+html {
+    font-size: 10px;
+    //sp
+    @media (max-width: 767px) {
+        // viewport 768px のとき font-size 16px
+        font-size: calc(100vw * 4.5 / 767);
+    }
+
+    @media (max-width: 600px) {
+        // viewport 768px のとき font-size 16px
+        font-size: calc(100vw * 6 / 600);
+    }
+
+    //pc
+    @media (min-width: 768px) {
+        // viewport 768px のとき font-size 16px
+        font-size: calc(100vw * 3.8 / 768);
+    }
+
+    @media (min-width: 1240px) {
+        // viewport 1240px のとき font-size 18px
+        font-size: calc(100vw * 6 / 1240);
+    }
+
+    @media (min-width: 1440px) {
+        // viewport 1440px のとき font-size 20px
+        font-size: calc(100vw * 7.5 / 1440);
+    }
+}
+
+#app {
+    max-width: 85%;
+    width: 85%;
+}
+
+// javascroll(1～20)のidと下のvisibleを追加
+.target {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.view {
+    opacity: 1;
+    transform: translateY(0rem);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.pcbr {
+    display: inline;
+}
+
+.spbr {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* PC時 */
+    .pcbr {
+        display: none;
+    }
+
+    .spbr {
+        display: inline;
+    }
+}
+
+.text-underline {
+    border-bottom: 1px solid rgb(31, 30, 30);
+}

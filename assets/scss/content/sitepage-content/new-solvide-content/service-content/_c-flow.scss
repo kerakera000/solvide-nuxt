@@ -1,0 +1,205 @@
+@use "../../../../foundation/base/f-font-family" as font;
+@use "../../../../foundation/class-mixin/f-newtitle" as title;
+@use "../../../../foundation/mixin/f-flex" as flex;
+
+.NSFlow{
+    width: 100vw;
+    margin: 0rem calc(50% - 50vw) 0;
+    background-color: #F5F5F5;
+    @include flex.flex($justify-content:flex-end,$align-items:flex-end);
+    flex-direction: column;
+    &__title{
+        width: 74%;
+        height: auto;
+        margin-top: 13rem;
+        @include flex.flex($justify-content:flex-start);
+        @include title.newtitle($justfit:flex-start,$aligin:flex-start);
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+    &__content{
+        width: 74%;
+        height: auto;
+        margin-top: 6rem;
+        margin-bottom: 12rem;
+        padding-bottom: 1rem;
+        overflow-x: scroll;
+        @include flex.flex($justify-content:flex-start);
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0px 4px rgb(92, 11, 112);
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: transparent linear-gradient(109deg, #761CC4 0%, #8379DC 23%, #7894E0 100%) 0% 0% no-repeat padding-box;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: transparent linear-gradient(109deg, #761CC4 0%, #8379DC 23%, #7894E0 100%) 0% 0% no-repeat padding-box;
+        }
+        &--scroll-box{
+            width: auto;
+            height: auto;
+            @include flex.flex();
+            flex-direction: column;
+            .NSFlow-item{
+                width: 15rem;
+                height: auto;
+                @include flex.flex($justify-content:flex-start,$align-items:flex-start);
+                flex-direction: column;
+                h3{
+                    padding-left: 1.4rem;
+                    @include font.font-Oswald-Bold($fontsize:2.4rem);
+                }
+                &--img{
+                    width: 15rem;
+                    height: 15rem;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .NSFlow-item-text1{
+                width: 29rem;
+                height: 8rem;
+                text-align: center;
+                background-color: #761CC4;
+                color: white;
+                position: relative;
+                @include flex.flex();
+                @include font.font-Notosan-Medium($fontsize:1.9rem);
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                    transform: translate(-0%,-50%);
+                    width: 3rem;
+                    z-index: 2;
+                    height: 100%;
+                    background-color: #761CC4;
+                    clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                }
+            }
+
+            .NSFlow-item-text2{
+                width: 29rem;
+                height: 8rem;
+                text-align: center;
+                background-color: #8147C8;
+                color: white;
+                position: relative;
+                @include flex.flex();
+                @include font.font-Notosan-Medium($fontsize:1.9rem);
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                    transform: translate(-0%,-50%);
+                    width: 3rem;
+                    z-index: 2;
+                    height: 100%;
+                    background-color: #8147C8;
+                    clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                }
+            }
+
+            .NSFlow-item-text3{
+                width: 29rem;
+                height: 8rem;
+                text-align: center;
+                background-color: #9363E0;
+                color: white;
+                position: relative;
+                @include flex.flex();
+                @include font.font-Notosan-Medium($fontsize:1.9rem);
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                    transform: translate(-0%,-50%);
+                    width: 3rem;
+                    z-index: 2;
+                    height: 100%;
+                    background-color: #9363E0;
+                    clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                }
+            }
+
+            .NSFlow-item-text4{
+                width: 29rem;
+                height: 8rem;
+                text-align: center;
+                background-color: #8379DC;
+                color: white;
+                position: relative;
+                @include flex.flex();
+                @include font.font-Notosan-Medium($fontsize:1.9rem);
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                    transform: translate(-0%,-50%);
+                    width: 3rem;
+                    z-index: 2;
+                    height: 100%;
+                    background-color: #8379DC;
+                    clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                }
+            }
+
+            .NSFlow-item-text5{
+                width: 29rem;
+                height: 8rem;
+                text-align: center;
+                background-color: #7894E0;
+                color: white;
+                position: relative;
+                @include flex.flex();
+                @include font.font-Notosan-Medium($fontsize:1.9rem);
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                    transform: translate(-0%,-50%);
+                    width: 3rem;
+                    z-index: 2;
+                    height: 100%;
+                    background-color: #7894E0;
+                    clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                }
+            }
+
+            .NSFlow-item-text6{
+                width: 29rem;
+                height: 8rem;
+                text-align: center;
+                background-color: #8379DC;
+                color: white;
+                position: relative;
+                @include flex.flex();
+                @include font.font-Notosan-Medium($fontsize:1.9rem);
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                    transform: translate(-0%,-50%);
+                    width: 3rem;
+                    z-index: 2;
+                    height: 100%;
+                    background-color: #8379DC;
+                    clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                }
+            }
+        }
+    }
+}

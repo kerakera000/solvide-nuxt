@@ -1,0 +1,142 @@
+@use "../../../../foundation/base/f-font-family" as font;
+@use "../../../../foundation/class-mixin/f-newtitle" as title;
+@use "../../../../foundation/mixin/f-flex" as flex;
+
+.NsContent{
+    width: 100vw;
+    height: auto;
+    margin: 0rem calc(50% - 50vw) 0;
+    padding: 0 8rem;
+    background-color: #F5F5F5;
+    @include flex.flex($justify-content:flex-start,$gap:10rem,$align-items:flex-end);
+    flex-direction: column;
+    &__box{
+        width: 76%;
+        height: 64rem;
+        margin-top: 20rem;
+        background-color: #C348FA;
+        position: relative;
+        @include flex.flex($justify-content:space-between,$gap:10rem);
+        &--text{
+            width: 50%;
+            height: 100%;
+            padding: 4rem 0 0 6rem;
+            @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:2rem);
+            flex-direction: column;
+            color: white;
+            h2{
+                @include font.font-Oswald-SemiBold($fontsize:5rem);
+            }
+            p{
+                @include font.font-Notosan-Bold($fontsize:2.2rem);
+            }
+            span{
+                background-color: white;
+                width: 100%;
+                height: 2px;
+            }
+            .NsContent-price{
+                @include font.font-Oswald-SemiBold($fontsize:3.6rem);
+                span{
+                    background-color: rgba(240, 248, 255, 0);
+                    @include font.font-Oswald-SemiBold($fontsize:3rem);
+                }
+            }
+            .Nscontent-main-text{
+                @include font.font-Oswald-Medium($fontsize:2.2rem,$lineHeight:4rem);
+            }
+        }
+        &--img{
+            width: 50%;
+            height: 100%;
+            position: relative;
+            .NsContent-img1{
+                background-color: #302F3D;
+                top: -16rem;
+                right: 0%;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                @include flex.flex();
+                background-image: url(/src/assets/new-solvide-images/home-images/service-images/1service.png);
+                background-size: 92rem;
+                background-position: -24rem;
+                background-repeat: no-repeat;
+            }
+            .NsContent-img2{
+                background-color: #302F3D;
+                top: -16rem;
+                right: 0%;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                @include flex.flex();
+                background-image: url(/src/assets/new-solvide-images/home-images/service-images/3service.png);
+                background-size: 60rem;
+                background-position: 4rem;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &--text2{
+            width: 50%;
+            height: 100%;
+            padding: 4rem 6rem 0 0rem;
+            @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:2rem);
+            flex-direction: column;
+            color: white;
+            h2{
+                @include font.font-Oswald-SemiBold($fontsize:5rem);
+            }
+            p{
+                @include font.font-Notosan-Bold($fontsize:2.2rem);
+            }
+            span{
+                background-color: white;
+                width: 100%;
+                height: 2px;
+            }
+            .NsContent-price{
+                @include font.font-Oswald-SemiBold($fontsize:3.6rem);
+                span{
+                    background-color: rgba(240, 248, 255, 0);
+                    @include font.font-Oswald-SemiBold($fontsize:3rem);
+                }
+            }
+            .Nscontent-main-text{
+                @include font.font-Oswald-Medium($fontsize:2.2rem,$lineHeight:4rem);
+            }
+        }
+        &--img2{
+            width: 50%;
+            height: 100%;
+            position: relative;
+            .NsContent-img3{
+                background-color: #302F3D;
+                top: -16rem;
+                right: 0%;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                @include flex.flex();
+                background-image: url(/src/assets/new-solvide-images/home-images/service-images/2service.png);
+                background-size: 64rem;
+                background-position: 3rem;
+                background-repeat: no-repeat;
+            }
+            .NsContent-img4{
+                background-color: #302F3D;
+                top: -16rem;
+                right: 0%;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                @include flex.flex();
+                background-image: url(/src/assets/new-solvide-images/home-images/service-images/4service.png);
+                background-size: 52rem;
+                background-position: 8rem;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

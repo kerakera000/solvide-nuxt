@@ -1,0 +1,90 @@
+@mixin flow(){
+    .flow-cnt{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+        &__box{
+            width: 30rem;
+            height: 30rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            &--img-box{
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 2.5rem;
+                &--size{
+                    width: 20rem;
+                    height: 20rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &--imgpc{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                    }
+                    &--imgsp{
+                        display: none;
+                    }
+                }
+            }
+            &--text-box{
+                width: 80%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &--text{
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    line-height: 3rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .flow-cnt{
+            gap: 14rem;
+            margin-top: 10rem;
+            flex-direction: column;
+            &__box{
+                gap: 4rem;
+                width: 90%;
+                height: auto;
+                &--img-box{
+                    padding-left: 0%;
+                    &--size{
+                        width: 50rem;
+                        height: 45rem;
+                        &--imgpc{
+                            display: none;
+                        }
+                        &--imgsp{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            display: block;
+                        }
+                    }
+                }
+                &--text-box{
+                    width: 93%;
+                    &--text{
+                        width: 63%;
+                        line-height: 6rem;
+                        font-size: 3.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

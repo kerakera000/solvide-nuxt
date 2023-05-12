@@ -1,0 +1,232 @@
+@use "../../foundation/base/f-font-family" as font;
+@use "../../foundation/mixin/f-flex" as flex;
+
+.header {
+    position: fixed;
+    top: 0%;
+    height: 7rem;
+    width: 100%;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%,0%);
+    &--title-sp{
+        display: none;
+    }
+    &__nav {
+        color: #131311;
+        height: 100%;
+        padding: 0 4rem;
+        backdrop-filter: blur(12px);
+        @include flex.flex($justify-content: flex-start);
+        &--title {
+            cursor: pointer;
+            @include font.font-roboto-regular($fontsize: 3.5rem);
+        }
+
+        &--list {
+            list-style: none;
+            margin-left: auto;
+            padding: 0;
+            @include flex.flex($gap:3rem);
+            &--item {
+                cursor: pointer;
+                width: 10rem;
+                height: 5rem;
+                border-radius: 2.4rem;
+                display: inline-block;
+                color: #131311;
+                @include flex.flex();
+
+                &:hover {
+                    border: solid 1px #F8B129;
+                    color: #F8B129;
+                }
+
+                &--text {
+                    text-decoration: none;
+                    font-size: 1.2em;
+                    display: block;
+                    @include font.font-roboto-regular($fontsize: 2rem);
+                }
+            }
+        }
+
+        &--contact-box {
+            height: 5rem;
+            width: 18rem;
+            border: #F8B129 solid 1px;
+            color: #F8B129;
+            border-radius: 2.4rem;
+            margin-left: 5rem;
+            cursor: pointer;
+            @include flex.flex($gap: 2rem);
+            &:hover {
+                background-color: #F8B129;
+                color: #ffffff !important;
+            }
+
+            &--text {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+.header-navsp-cnt{
+    display: none;
+}
+.scroll-down {
+    position: absolute;
+    bottom: 7rem;
+    left: 4rem;
+    width: 12rem;
+    height: 10rem;
+    @include flex.flex;
+    flex-direction: column;
+
+    &__text {
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    &__img {
+        width: 3rem;
+        height: 7rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 100%;
+        z-index: 998;
+        height: 16rem;
+        &--title-sp{
+            display: block;
+            position: fixed;
+            width: 100%;
+            height: 15rem;
+            top: 0rem;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            @include font.font-roboto-regular($fontsize: 6.5rem);
+            &::after{
+                content: "Solvide";
+                margin-left: 5rem;
+            }
+        }
+        &__nav{
+            color: #131311;
+            height: 100%;
+            padding: 0 4rem;
+            flex-direction: column;
+            transition: 0.4s;
+            transform: translate(120%);
+            @include flex.flex($justify-content:flex-start,$align-items:center);
+            &--title {
+                display: none;
+                width: 100%;
+                align-items: center;
+                justify-content: flex-start;
+                margin-top: 3rem;
+                cursor: pointer;
+                @include font.font-roboto-regular($fontsize: 6.5rem);
+            }
+            &--list {
+                width: 100%;
+                height: auto;
+                margin: 30rem 0 0;
+                flex-direction: column;
+                @include flex.flex($align-items:center,$gap:10rem);
+                &--item {
+                    height: auto;
+                    width: auto;
+                    &:hover {
+                        border: solid 0px #f8b02900;
+                        color: #f8b02900;
+                    }
+                    &--text {
+                        padding: 0%;
+                        @include font.font-roboto-regular($fontsize: 5rem);
+                    }
+                }
+            }
+            &--contact-box {
+                height: auto;
+                width: auto;
+                margin-top: 16rem;
+                background-color: #F8B129;
+                color: #ffffff !important;
+                margin-left: 0%;
+                border-radius: 5rem;
+                @include flex.flex($gap: 2rem);
+                &:hover {
+                    background-color: #F8B129;
+                    color: #ffffff !important;
+                }
+    
+                &--text {
+                    margin: 2rem 4rem;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+    .header.activeheader{
+        height: 100%;
+    }
+    .header__nav.activeheader{
+        transition: 0.4s;
+        transform: translate(0rem);
+    }
+    .header-navsp-cnt{
+        width: 32px;
+        height: 33px;
+        position: fixed;
+        top: 3.1rem;
+        right: 6rem;
+        z-index: 999;
+        @include flex.flex($justify-content:space-around,$align-items:center);
+        flex-direction: column;
+        span{
+            width: 100%;
+            height: 1.5px;
+            background-color: #131311;
+            display: block;
+            transition: 0.4s;
+        }
+    }
+    .header-navsp-cnt.activeheader{
+        .span1{
+            transform: rotate(44deg) translate(7px, 9px);
+        }
+        .span2{
+            width: 0%;
+        }
+        .span3{
+            transform: rotate(-44deg) translate(6px,-9px);
+        }
+    }
+    .scroll-down {
+        position: absolute;
+        bottom: 6rem;
+        left: 4rem;
+        width: auto;
+        height: 10rem;
+        @include flex.flex;
+        flex-direction: column;
+    
+        &__text {
+            margin-bottom: 3.5rem;
+            font-size: 3.5rem;
+        }
+    
+        &__img {
+            width: 6rem;
+            height: 14rem;
+        }
+    }
+}

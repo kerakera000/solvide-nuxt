@@ -1,0 +1,63 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+@use "../../../foundation/class-mixin/f-title" as title;
+@use "../../../foundation/class-mixin/f-web" as web;
+
+#service{
+    margin-bottom: 17rem;
+}
+.service{
+    margin-top: 15rem;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    @include flex.flex;
+    &__title{
+        width: 100%;
+        @include flex.flex($justify-content:flex-start);
+        @include title.title;
+    }
+    &__web{
+        width: 100%;
+        margin-top: 5rem;
+        &--title{
+            width: 100%;
+            margin-bottom: 5rem;
+            @include flex.flex;
+            &--text{
+                @include font.font-roboto-bold($fontsize:4rem, $color:black);
+            }
+        }
+        &--content{
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+            @include flex.flex;
+            @include web.web;
+            .web-under-line{
+                width: 100%;
+                height: 2px;
+                background-color: #F8B129;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .service{
+        &__title{
+            width: 80%;
+        }
+        &__web{
+            width: 80%;
+            &--title{
+                &--text{
+                    @include font.font-roboto-bold($fontsize:6rem, $color:black);
+                }
+            }
+            &--content{
+                @include flex.flex($gap:9rem);
+                @include web.web;
+            }
+        }
+    }
+}

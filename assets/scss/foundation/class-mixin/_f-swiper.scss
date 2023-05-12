@@ -1,0 +1,205 @@
+@mixin swiper(){
+    .swiper-cnt{
+        .swiper-img{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 110rem;
+                height: 100%;
+                object-fit: contain;
+                border: solid 1px black;
+                width: auto;
+            }
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #141414;
+            gap: 5px;
+            h2{
+                font-size: 2.4rem;
+            }
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        position: relative;
+    }
+    .swiper {
+        width: 100%;
+        height: 65rem;
+        margin: 0.5rem auto;
+    }
+    .swiper-button-next{
+        width: 5rem;
+        height: 5rem;
+        right: 21rem;
+        border-radius: 50%;
+        transform: translateY(-4rem) translateX(-23rem);
+        background-color: rgba(32, 32, 32, 0.801);
+        color: white;
+        &::after{
+            font-size: 3rem;
+            transform: translateX(2px);
+        }
+    }
+    .swiper-button-prev{
+        width: 5rem;
+        height: 5rem;
+        left: 21rem;
+        border-radius: 50%;
+        transform: translateY(-4rem) translateX(23rem);
+        background-color: rgba(32, 32, 32, 0.801);
+        color: white;
+        &::after{
+            font-size: 3rem;
+            transform: translateX(-2px);
+        }
+    }
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        font-weight: bold;
+        transform: translateZ(0) !important;
+        gap: 20px;
+        &--img-box{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--img{
+                width: 100%;
+                height: 100%;
+                border: 3px solid black;
+            }
+        }
+        &--title{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            color: #333333;
+            margin-top: 3rem;
+            &--text{
+                font-family: 'Roboto', sans-serif;
+                font-size: 2.9rem;
+            }
+            &--sub-text{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+        }
+    }
+    /* ページネーション */
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+    bottom: 0rem; //2文字分下に下げる
+    }
+    .swiper-pagination{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        gap: 1.5rem;
+    }
+    .swiper-slide-next{
+        transform: scaleY(0.8) !important;
+    }
+    .swiper-slide-prev{
+        transform: scaleY(0.8) !important;
+    }
+    .swiper-pagination-bullet{
+        width: 3rem;
+        height: 0.5rem;
+        border-radius: 3px;
+        background-color: #141414;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #F8B129;
+    }
+    @media screen and (max-width: 768px) {
+        .red{
+            background-color: red !important;
+        }
+        .container {
+            margin-left: auto;
+        }
+        .swiper {
+            width: 100%;
+            height: 60rem;
+        }
+        .swiper-button-next{
+            right: -17rem;
+            width: 10rem;
+            height: 10rem;
+            &::after{
+                font-size: 5rem;
+            }
+        }
+        .swiper-button-prev{
+            left: -17rem;
+            width: 10rem;
+            height: 10rem;
+            &::after{
+                font-size: 5rem;
+            }
+        }
+        .swiper-slide {
+            &--img-box{
+                &--img{
+                    border: 3px solid black;
+                }
+            }
+            &--title{
+                &--text{
+                    font-size: 2.9rem;
+                }
+                &--sub-text{
+                    font-size: 2rem;
+                }
+            }
+        }
+        /* ページネーション */
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+        bottom: 0rem; //2文字分下に下げる
+        }
+        .swiper-pagination{
+            gap: 1.5rem;
+        }
+        .swiper-slide{
+            transform: scale(0.8) translateZ(0) !important;
+        }
+        .swiper-slide-next{
+            width: 70rem;
+            transform: scale(0.9) translateZ(0) !important;
+        }
+        .swiper-pagination-bullet{
+            background-color: #141414;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #F8B129;
+        }
+    }
+}
