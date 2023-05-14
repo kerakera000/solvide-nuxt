@@ -14,6 +14,7 @@
     import NWorkComp from '@/components/solvide/NWorkComp.vue';
     import NBlogsComp from '@/components/solvide/NBlogsComp.vue';
     import NContactComp from '@/components/solvide/NContactComp.vue';
+    
 
 export default {
     name: 'solvide-page',
