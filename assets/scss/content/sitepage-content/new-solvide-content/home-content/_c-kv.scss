@@ -14,7 +14,7 @@
         @include flex.flex($align-items:flex-start,$justify-content:flex-start);
     }
     &__text-box{
-        width: 41%;
+        width: 90rem;
         height: 100%;
         @include flex.flex($align-items:flex-start,$justify-content:flex-end);
         flex-direction: column;

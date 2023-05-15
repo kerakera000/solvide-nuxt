@@ -9,16 +9,16 @@
                 </h1>
                 <div class="Newheader__cnt--box--contact">
                     <img src="../../assets/new-solvide-images/home-images/header-images/feather-mail.png" alt="">
-                    <p>お問い合わせ</p>
+                    <router-link to="/contact" class="contact-text">お問い合わせ</router-link>
                 </div>
             </div>
             <div class="New-nav-hover">
                 <nav class="Newheader__cnt--nav">
-                    <router-link to="/solvide-policy" class="Newnav-list Nl1">私たちについて</router-link>
-                    <router-link to="/solvide-service" class="Newnav-list Nl2">サービス内容</router-link>
+                    <router-link to="/policy" class="Newnav-list Nl1">私たちについて</router-link>
+                    <router-link to="/service" class="Newnav-list Nl2">サービス内容</router-link>
                     <router-link to="/" class="Newnav-list Nl3">ブログ</router-link>
                     <router-link to="/" class="Newnav-list Nl4">お知らせ</router-link>
-                    <router-link to="/" class="Newnav-list Nl5">お問い合わせ</router-link>
+                    <router-link to="/contact" class="Newnav-list Nl5">お問い合わせ</router-link>
                 </nav>
                 <button class="Newheader__cnt--button">
                     <div class="Newheader-spanbox">
