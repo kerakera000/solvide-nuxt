@@ -65,10 +65,7 @@
                 margin-left: auto;
                 @include font.font-Notosan-Bold();
                 @media screen and (max-width: 768px) {
-                    position: absolute;
-                    right: 10%;
-                    top: 50%;
-                    transform: translate(0%,-50%);
+                    display: none;
                 }
             }
         }

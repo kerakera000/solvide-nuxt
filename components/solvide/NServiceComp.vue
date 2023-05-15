@@ -48,7 +48,7 @@
                 <div class="fNservice NewService-img4">
                     <div class="fNservice__text">
                         <span>04</span>
-                        <h3>WEBSITE<br>MAINTENANCE/OPERATION</h3>
+                        <h3>WEBSITE<br>MAINTENANCE/<br class="spbr">OPERATION</h3>
                         <p>サイトの保守、運用</p>
                     </div>
                     <div class="fNservice__button">

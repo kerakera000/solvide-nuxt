@@ -807,7 +807,7 @@ body {
 @media screen and (max-width: 768px) {
   .Newheader__cnt--button {
     right: 4%;
-    height: 7rem;
+    height: 6rem;
     width: 7rem;
   }
 }
@@ -1218,8 +1218,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   .nkv__text-box--title h2 {
-    line-height: 12rem;
-    font-size: 10rem;
+    line-height: 10rem;
+    font-size: 8rem;
+    letter-spacing: 0.5px;
   }
 }
 .nkv__scroll {
@@ -1451,10 +1452,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .Nabout__news--box .Nabout-view-more {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    transform: translate(0%, -50%);
+    display: none;
   }
 }
 .Nabout__title {
@@ -3373,7 +3371,7 @@ body {
   gap: 0rem;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/1service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/1service.png);
   background-size: 92rem;
   background-position: -24rem;
   background-repeat: no-repeat;
@@ -3389,7 +3387,7 @@ body {
   gap: 0rem;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/3service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/3service.png);
   background-size: 60rem;
   background-position: 4rem;
   background-repeat: no-repeat;
@@ -3462,7 +3460,7 @@ body {
   gap: 0rem;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/2service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/2service.png);
   background-size: 64rem;
   background-position: 3rem;
   background-repeat: no-repeat;
@@ -3478,7 +3476,7 @@ body {
   gap: 0rem;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/4service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/4service.png);
   background-size: 52rem;
   background-position: 8rem;
   background-repeat: no-repeat;
