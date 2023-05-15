@@ -17,6 +17,7 @@
         width: 100%;
         height: 100%;
         position: relative;
+        background: rgba(145, 144, 144, 0.356);
         @include flex.flex();
         &--box{
             width: 100%;
@@ -42,7 +43,7 @@
                 @media screen and (max-width: 768px) {
                     display: none;
                 }
-                p{
+                .contact-text{
                     color: white;
                     @include font.font-Notosan-Bold($fontsize:2rem);
                 }
