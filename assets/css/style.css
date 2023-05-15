@@ -379,7 +379,7 @@ html {
 }
 @media (max-width: 767px) {
   html {
-    font-size: 0.5867014342vw;
+    font-size: 0.7170795306vw;
   }
 }
 @media (max-width: 600px) {
@@ -389,7 +389,12 @@ html {
 }
 @media (min-width: 768px) {
   html {
-    font-size: 0.4947916667vw;
+    font-size: 0.5208333333vw;
+  }
+}
+@media (min-width: 800px) {
+  html {
+    font-size: 0.625vw;
   }
 }
 @media (min-width: 1240px) {
@@ -700,6 +705,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  background: rgba(145, 144, 144, 0.356);
   display: flex;
   gap: 0rem;
   justify-content: center;
@@ -739,7 +745,7 @@ body {
     display: none;
   }
 }
-.Newheader__cnt--box--contact p {
+.Newheader__cnt--box--contact .contact-text {
   color: white;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
@@ -925,7 +931,7 @@ body {
     display: none;
   }
 }
-.Newheaderb__cnt--box--contact p {
+.Newheaderb__cnt--box--contact .contact-text {
   color: black;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
@@ -1159,7 +1165,7 @@ body {
   }
 }
 .nkv__text-box {
-  width: 41%;
+  width: 90rem;
   height: 100%;
   display: flex;
   gap: 0rem;
@@ -1354,7 +1360,6 @@ body {
   width: 100vw;
   height: 149rem;
   margin: 0rem calc(50% - 50vw) 0;
-  padding: 0 8rem;
   background: rgba(145, 144, 144, 0.356);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   -webkit-backdrop-filter: blur(20px);
@@ -2110,16 +2115,16 @@ body {
   color: white;
 }
 .Nservice__cnt--col .NewService-img1 {
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/1service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/1service.png);
 }
 .Nservice__cnt--col .NewService-img2 {
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/2service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/2service.png);
 }
 .Nservice__cnt--col .NewService-img3 {
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/3service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/3service.png);
 }
 .Nservice__cnt--col .NewService-img4 {
-  background-image: url(/src/assets/new-solvide-images/home-images/service-images/4service.png);
+  background-image: url(/assets/new-solvide-images/home-images/service-images/4service.png);
 }
 .Nservice__button {
   margin-top: 10rem;
@@ -2987,7 +2992,7 @@ body {
 
 .NserviceKV {
   width: 100vw;
-  height: 100vh;
+  height: 90rem;
   margin: 0rem calc(50% - 50vw) 0;
   padding: 0 8rem;
   background-color: #F5F5F5;
