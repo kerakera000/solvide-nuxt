@@ -42,7 +42,7 @@
                 @media screen and (max-width: 768px) {
                     display: none;
                 }
-                p{
+                .contact-text{
                     color: black;
                     @include font.font-Notosan-Bold($fontsize:2rem);
                 }
