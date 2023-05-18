@@ -12,24 +12,44 @@
         color: white;
         padding-left: 5rem;
         @include flex.flex($justify-content:flex-start,$gap:2rem,$align-items:flex-end);
+        @media screen and (max-width: 768px) {
+            margin-top: 15rem;
+        }
         h2{
             @include font.font-Oswald-SemiBold($fontsize:2.8rem);
+            @media screen and (max-width: 768px) {
+                font-size: 4rem;
+            }
         }
         p{
             @include font.font-Oswald-SemiBold($fontsize:1.4rem);
+            @media screen and (max-width: 768px) {
+                font-size: 1.6rem;
+            }
         }
     }
     &__content{
         width: 100%;
         padding: 8rem 14rem 0;
         @include flex.flex();
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 8rem 8rem 0;
+        }
         &--text{
+            order: 2;
             width: 50%;
+            @media screen and (max-width: 768px) {
+                display: contents;
+            }
             .NPkv-sub-title{
                 width: 100%;
                 @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:1rem);
                 flex-direction: column;
                 color: white;
+                @media screen and (max-width: 768px) {
+                    order: 1;
+                }
                 h2{
                     @include font.font-Oswald-SemiBold($fontsize:6rem);
                 }
@@ -47,15 +67,22 @@
                 @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:3rem);
                 flex-direction: column;
                 color: white;
+                @media screen and (max-width: 768px) {
+                    order: 3;
+                }
                 p{
                     @include font.font-Notosan-Medium($fontsize:2.2rem,$lineHeight:5.6rem,$letterSpacing:0.7px);
                 }
             }
         }
         &--ball{
+            order: 2;
             width: 50%;
             height: 100%;
             @include flex.flex();
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
             div{
                 width: 50rem;
                 height: 50rem;

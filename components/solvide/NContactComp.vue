@@ -16,7 +16,7 @@
         </div>
         <div class="NContact__button">
             <div class="main-contact-btn">
-                <button>CONTACT</button>
+                <router-link to="/contact" class="Mbutton">CONTACT</router-link>
             </div>
         </div>
     </section>

@@ -23,10 +23,6 @@ export default defineNuxtConfig({
             rel: "stylesheet",
             href: "https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap",
         },
-        {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-        },
         ],
     }
     },

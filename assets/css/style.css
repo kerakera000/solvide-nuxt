@@ -441,6 +441,11 @@ body {
   display: none;
 }
 
+#__nuxt {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 767px) {
   #app {
     display: flex;
@@ -1075,7 +1080,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.nkv .main-contact-btn button {
+.nkv .main-contact-btn .Mbutton {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -1090,11 +1095,11 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .nkv .main-contact-btn button {
+  .nkv .main-contact-btn .Mbutton {
     font-size: 3.5rem;
   }
 }
-.nkv .main-contact-btn button::after {
+.nkv .main-contact-btn .Mbutton::after {
   content: ">";
   width: 9rem;
   height: 9rem;
@@ -1112,7 +1117,7 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .nkv .main-contact-btn button::after {
+  .nkv .main-contact-btn .Mbutton::after {
     font-size: 3.5rem;
     content: ">";
     width: 100%;
@@ -1132,7 +1137,7 @@ body {
     justify-content: flex-end;
   }
 }
-.nkv .main-contact-btn:hover button::after {
+.nkv .main-contact-btn:hover .Mbutton::after {
   content: ">";
   width: 100%;
   height: 9rem;
@@ -1151,7 +1156,7 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  .nkv .main-contact-btn:hover button::after {
+  .nkv .main-contact-btn:hover .Mbutton::after {
     height: 11rem;
   }
 }
@@ -1713,7 +1718,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.Nabout__contact--box--empty .main-contact-btn button {
+.Nabout__contact--box--empty .main-contact-btn .Mbutton {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -1728,11 +1733,11 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nabout__contact--box--empty .main-contact-btn button {
+  .Nabout__contact--box--empty .main-contact-btn .Mbutton {
     font-size: 3.5rem;
   }
 }
-.Nabout__contact--box--empty .main-contact-btn button::after {
+.Nabout__contact--box--empty .main-contact-btn .Mbutton::after {
   content: ">";
   width: 9rem;
   height: 9rem;
@@ -1750,7 +1755,7 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nabout__contact--box--empty .main-contact-btn button::after {
+  .Nabout__contact--box--empty .main-contact-btn .Mbutton::after {
     font-size: 3.5rem;
     content: ">";
     width: 100%;
@@ -1770,7 +1775,7 @@ body {
     justify-content: flex-end;
   }
 }
-.Nabout__contact--box--empty .main-contact-btn:hover button::after {
+.Nabout__contact--box--empty .main-contact-btn:hover .Mbutton::after {
   content: ">";
   width: 100%;
   height: 9rem;
@@ -1789,7 +1794,7 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  .Nabout__contact--box--empty .main-contact-btn:hover button::after {
+  .Nabout__contact--box--empty .main-contact-btn:hover .Mbutton::after {
     height: 11rem;
   }
 }
@@ -1809,7 +1814,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.Nabout__contact--box--empty2 .main-contact-btn button {
+.Nabout__contact--box--empty2 .main-contact-btn .Mbutton {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -1824,11 +1829,11 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nabout__contact--box--empty2 .main-contact-btn button {
+  .Nabout__contact--box--empty2 .main-contact-btn .Mbutton {
     font-size: 3.5rem;
   }
 }
-.Nabout__contact--box--empty2 .main-contact-btn button::after {
+.Nabout__contact--box--empty2 .main-contact-btn .Mbutton::after {
   content: ">";
   width: 9rem;
   height: 9rem;
@@ -1846,7 +1851,7 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nabout__contact--box--empty2 .main-contact-btn button::after {
+  .Nabout__contact--box--empty2 .main-contact-btn .Mbutton::after {
     font-size: 3.5rem;
     content: ">";
     width: 100%;
@@ -1866,7 +1871,7 @@ body {
     justify-content: flex-end;
   }
 }
-.Nabout__contact--box--empty2 .main-contact-btn:hover button::after {
+.Nabout__contact--box--empty2 .main-contact-btn:hover .Mbutton::after {
   content: ">";
   width: 100%;
   height: 9rem;
@@ -1885,7 +1890,7 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  .Nabout__contact--box--empty2 .main-contact-btn:hover button::after {
+  .Nabout__contact--box--empty2 .main-contact-btn:hover .Mbutton::after {
     height: 11rem;
   }
 }
@@ -2135,7 +2140,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.Nservice__button .main-contact-btn button {
+.Nservice__button .main-contact-btn .Mbutton {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -2150,12 +2155,12 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nservice__button .main-contact-btn button {
+  .Nservice__button .main-contact-btn .Mbutton {
     font-size: 3.5rem;
     color: white;
   }
 }
-.Nservice__button .main-contact-btn button::after {
+.Nservice__button .main-contact-btn .Mbutton::after {
   content: ">";
   width: 9rem;
   height: 9rem;
@@ -2175,7 +2180,7 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nservice__button .main-contact-btn button::after {
+  .Nservice__button .main-contact-btn .Mbutton::after {
     font-size: 3.5rem;
     content: ">";
     width: 100%;
@@ -2195,10 +2200,10 @@ body {
     justify-content: flex-end;
   }
 }
-.Nservice__button .main-contact-btn:hover button {
+.Nservice__button .main-contact-btn:hover .Mbutton {
   color: white;
 }
-.Nservice__button .main-contact-btn:hover button::after {
+.Nservice__button .main-contact-btn:hover .Mbutton::after {
   content: ">";
   width: 100%;
   height: 9rem;
@@ -2217,7 +2222,7 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  .Nservice__button .main-contact-btn:hover button::after {
+  .Nservice__button .main-contact-btn:hover .Mbutton::after {
     height: 11rem;
   }
 }
@@ -2413,7 +2418,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.Nwork__button .main-contact-btn button {
+.Nwork__button .main-contact-btn .Mbutton {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -2428,12 +2433,12 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nwork__button .main-contact-btn button {
+  .Nwork__button .main-contact-btn .Mbutton {
     font-size: 3.5rem;
     color: white;
   }
 }
-.Nwork__button .main-contact-btn button::after {
+.Nwork__button .main-contact-btn .Mbutton::after {
   content: ">";
   width: 9rem;
   height: 9rem;
@@ -2453,7 +2458,7 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nwork__button .main-contact-btn button::after {
+  .Nwork__button .main-contact-btn .Mbutton::after {
     font-size: 3.5rem;
     content: ">";
     width: 100%;
@@ -2473,10 +2478,10 @@ body {
     justify-content: flex-end;
   }
 }
-.Nwork__button .main-contact-btn:hover button {
+.Nwork__button .main-contact-btn:hover .Mbutton {
   color: white;
 }
-.Nwork__button .main-contact-btn:hover button::after {
+.Nwork__button .main-contact-btn:hover .Mbutton::after {
   content: ">";
   width: 100%;
   height: 9rem;
@@ -2495,7 +2500,7 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  .Nwork__button .main-contact-btn:hover button::after {
+  .Nwork__button .main-contact-btn:hover .Mbutton::after {
     height: 11rem;
   }
 }
@@ -2707,7 +2712,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.Nblogs__button .main-contact-btn button {
+.Nblogs__button .main-contact-btn .Mbutton {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -2722,12 +2727,12 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nblogs__button .main-contact-btn button {
+  .Nblogs__button .main-contact-btn .Mbutton {
     font-size: 3.5rem;
     color: white;
   }
 }
-.Nblogs__button .main-contact-btn button::after {
+.Nblogs__button .main-contact-btn .Mbutton::after {
   content: ">";
   width: 9rem;
   height: 9rem;
@@ -2747,7 +2752,7 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .Nblogs__button .main-contact-btn button::after {
+  .Nblogs__button .main-contact-btn .Mbutton::after {
     font-size: 3.5rem;
     content: ">";
     width: 100%;
@@ -2767,10 +2772,10 @@ body {
     justify-content: flex-end;
   }
 }
-.Nblogs__button .main-contact-btn:hover button {
+.Nblogs__button .main-contact-btn:hover .Mbutton {
   color: white;
 }
-.Nblogs__button .main-contact-btn:hover button::after {
+.Nblogs__button .main-contact-btn:hover .Mbutton::after {
   content: ">";
   width: 100%;
   height: 9rem;
@@ -2789,7 +2794,7 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  .Nblogs__button .main-contact-btn:hover button::after {
+  .Nblogs__button .main-contact-btn:hover .Mbutton::after {
     height: 11rem;
   }
 }
@@ -2907,7 +2912,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.NContact__button .main-contact-btn button {
+.NContact__button .main-contact-btn .Mbutton {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -2922,11 +2927,11 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .NContact__button .main-contact-btn button {
+  .NContact__button .main-contact-btn .Mbutton {
     font-size: 3.5rem;
   }
 }
-.NContact__button .main-contact-btn button::after {
+.NContact__button .main-contact-btn .Mbutton::after {
   content: ">";
   width: 9rem;
   height: 9rem;
@@ -2944,7 +2949,7 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .NContact__button .main-contact-btn button::after {
+  .NContact__button .main-contact-btn .Mbutton::after {
     font-size: 3.5rem;
     content: ">";
     width: 100%;
@@ -2964,7 +2969,7 @@ body {
     justify-content: flex-end;
   }
 }
-.NContact__button .main-contact-btn:hover button::after {
+.NContact__button .main-contact-btn:hover .Mbutton::after {
   content: ">";
   width: 100%;
   height: 9rem;
@@ -2983,7 +2988,7 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  .NContact__button .main-contact-btn:hover button::after {
+  .NContact__button .main-contact-btn:hover .Mbutton::after {
     height: 11rem;
   }
 }
@@ -3793,6 +3798,355 @@ body {
           clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
 }
 
+.Ccontact {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Ccontact .Cbackground {
+  width: 100%;
+  height: 100svh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: transparent linear-gradient(142deg, #8524D9 30%, #C348FA 50%, #8805c4 100%) 0% 0% no-repeat padding-box;
+}
+.Ccontact .Cbackground__cnt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.Ccontact .Cbackground__cnt .Cball1 {
+  width: 70rem;
+  height: 70rem;
+  background: transparent radial-gradient(closest-side at 50% 50%, #CF9CF0 0%, #a525eb 100%) 0% 0% no-repeat padding-box;
+  filter: blur(1px);
+  border-radius: 50%;
+}
+.Ccontact .Cbackground__cnt .Cball2 {
+  width: 40rem;
+  height: 40rem;
+  background: transparent radial-gradient(closest-side at 50% 50%, #A07FEB 0%, #6b47e2 100%, #A354F1 100%) 0% 0% no-repeat padding-box;
+  filter: blur(1px);
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  bottom: 3%;
+}
+.Ccontact .Ctitle {
+  margin-top: 14.1rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .Ctitle {
+    margin-top: 40rem;
+  }
+}
+.Ccontact .Ctitle h1 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  line-height: inherit;
+  font-size: 7rem;
+}
+.Ccontact .Ctitle p {
+  color: white;
+  margin-bottom: 5px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: 1.6rem;
+}
+.Ccontact .Ctitle span {
+  width: 8.3rem;
+  height: 2px;
+  background: transparent linear-gradient(269deg, #FFFFFF 0%, #C348FA 100%) 0% 0% no-repeat padding-box;
+}
+.Ccontact .form {
+  width: 100%;
+  height: auto;
+  margin-top: 9rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+.Ccontact .form__content {
+  width: 60%;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content {
+    gap: 6rem;
+    width: 85%;
+  }
+}
+.Ccontact .form__content--flex {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex {
+    flex-direction: column;
+    gap: 2rem;
+    height: 15rem;
+  }
+}
+.Ccontact .form__content--flex .form-text {
+  width: auto;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: 2.4rem;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex .form-text {
+    width: 100%;
+    font-size: 4rem;
+  }
+}
+.Ccontact .form__content--flex .form-text span {
+  margin-left: 1rem;
+  color: #db2d2d;
+}
+.Ccontact .form__content--flex .form-box {
+  width: 100%;
+  height: 1px;
+  transition: 0.4s;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex .form-box {
+    width: 100%;
+    height: 13rem;
+  }
+}
+.Ccontact .form__content--flex .form-box .min {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  height: 100%;
+  color: rgb(12, 12, 12);
+  background-color: rgb(232, 240, 254);
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex .form-box .min {
+    font-size: 4rem;
+  }
+}
+.Ccontact .form__content--flex .form-box .min:focus {
+  outline: solid 2px #C348FA;
+}
+.Ccontact .form__content--flex .form-box .min option {
+  height: 8rem;
+}
+.Ccontact .form__content--flex .form-box.select {
+  width: 100%;
+  padding-right: 4rem;
+  justify-content: flex-end;
+  position: relative;
+}
+.Ccontact .form__content--flex .form-box.select select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 0px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(232, 240, 254);
+}
+.Ccontact .form__content--flex .form-box.select select option {
+  width: 100%;
+  height: 5.6rem;
+  padding: 2rem 0;
+  color: rgb(102, 95, 95);
+  font-size: 3rem;
+}
+.Ccontact .form__content--flex .form-box.select select option:checked {
+  background-color: #510096;
+  color: white;
+}
+.Ccontact .form__content--flex .form-box.select select option:hover {
+  background-color: #510096 !important;
+  color: white;
+}
+.Ccontact .form__content--flex .form-box.select div {
+  width: 1rem;
+  height: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: rotate(270deg);
+  background-image: url(/wp-content/themes/testsite/images/icon/under.svg);
+}
+.Ccontact .form__content--flex:hover .form-box {
+  height: 15rem;
+  background: rgba(255, 255, 255, 0.1019607843) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+.Ccontact .form__content--flex-large {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex-large {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+}
+.Ccontact .form__content--flex-large .form-text {
+  width: auto;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: 2.2rem;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex-large .form-text {
+    width: 100%;
+    font-size: 4rem;
+  }
+}
+.Ccontact .form__content--flex-large .form-text span {
+  color: #db2d2d;
+  margin-left: 1rem;
+}
+.Ccontact .form__content--flex-large .form-box-large {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex-large .form-box-large {
+    width: 100%;
+    height: 60rem;
+  }
+}
+.Ccontact .form__content--flex-large .form-box-large .large {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: 2rem;
+  border: 2px solid #FFFFFF;
+  background-color: rgb(232, 240, 254);
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content--flex-large .form-box-large .large {
+    font-size: 4rem;
+  }
+}
+.Ccontact .form__content--flex-large .form-box-large .large:focus {
+  outline: solid 2px rgba(92, 118, 246, 0);
+}
+.Ccontact .form__content .radio {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content .radio {
+    gap: 6rem;
+  }
+}
+.Ccontact .form__content .radio__button {
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 1.5px solid #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content .radio__button {
+    width: 3.7rem;
+    height: 3.7rem;
+  }
+}
+.Ccontact .form__content .radio__button:checked {
+  background-color: #31C4E6;
+}
+.Ccontact .form__content .radio__text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: 2rem;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .Ccontact .form__content .radio__text {
+    font-size: 4rem;
+  }
+}
+.Ccontact .form__content .radio__text a {
+  text-decoration: underline;
+}
+.Ccontact .form__content .form-submit-box {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 16rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .NPkv {
   width: 100vw;
   height: 110vh;
@@ -3808,6 +4162,11 @@ body {
   justify-content: flex-start;
   align-items: flex-end;
 }
+@media screen and (max-width: 768px) {
+  .NPkv__title {
+    margin-top: 15rem;
+  }
+}
 .NPkv__title h2 {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
@@ -3815,12 +4174,22 @@ body {
   line-height: inherit;
   font-size: 2.8rem;
 }
+@media screen and (max-width: 768px) {
+  .NPkv__title h2 {
+    font-size: 4rem;
+  }
+}
 .NPkv__title p {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   letter-spacing: inherit;
   line-height: inherit;
   font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
+  .NPkv__title p {
+    font-size: 1.6rem;
+  }
 }
 .NPkv__content {
   width: 100%;
@@ -3830,8 +4199,20 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .NPkv__content {
+    flex-direction: column;
+    padding: 8rem 8rem 0;
+  }
+}
 .NPkv__content--text {
+  order: 2;
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .NPkv__content--text {
+    display: contents;
+  }
 }
 .NPkv__content--text .NPkv-sub-title {
   width: 100%;
@@ -3841,6 +4222,11 @@ body {
   align-items: flex-start;
   flex-direction: column;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .NPkv__content--text .NPkv-sub-title {
+    order: 1;
+  }
 }
 .NPkv__content--text .NPkv-sub-title h2 {
   font-family: "Oswald", sans-serif;
@@ -3870,6 +4256,11 @@ body {
   flex-direction: column;
   color: white;
 }
+@media screen and (max-width: 768px) {
+  .NPkv__content--text .NPkv-sub-text {
+    order: 3;
+  }
+}
 .NPkv__content--text .NPkv-sub-text p {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
@@ -3878,12 +4269,18 @@ body {
   font-size: 2.2rem;
 }
 .NPkv__content--ball {
+  order: 2;
   width: 50%;
   height: 100%;
   display: flex;
   gap: 0rem;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .NPkv__content--ball {
+    width: 100%;
+  }
 }
 .NPkv__content--ball div {
   width: 50rem;
@@ -3925,6 +4322,12 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .NPprofille {
+    height: auto;
+    padding-bottom: 20rem;
+  }
 }
 .NPprofille__title {
   width: 60%;
@@ -3983,12 +4386,18 @@ body {
 }
 @media screen and (max-width: 768px) {
   .NPprofille__title {
-    width: 90%;
+    width: 100%;
   }
 }
 .NPprofille__content {
   width: 60%;
   margin-top: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .NPprofille__content {
+    width: 100%;
+    margin-top: 15rem;
+  }
 }
 .NPprofille__content .line {
   display: block;
@@ -4004,13 +4413,28 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .NPprofille__content .NPprofille-col {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    height: 20rem;
+  }
+}
 .NPprofille__content .NPprofille-col h3 {
   width: 30rem;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   letter-spacing: inherit;
   line-height: inherit;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+}
+@media screen and (max-width: 768px) {
+  .NPprofille__content .NPprofille-col h3 {
+    width: 100%;
+    font-size: 4rem;
+  }
 }
 .NPprofille__content .NPprofille-col p {
   width: 40rem;
@@ -4018,5 +4442,11 @@ body {
   font-weight: 500;
   letter-spacing: inherit;
   line-height: inherit;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+}
+@media screen and (max-width: 768px) {
+  .NPprofille__content .NPprofille-col p {
+    width: 100%;
+    font-size: 3.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
