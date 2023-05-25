@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <HeaderComp/>
-        <slot/>
-        <FooterComp/>
-    </div>
+    <HeaderComp/>
+    <slot/>
+    <FooterComp/>
 </template>
 
 <script>

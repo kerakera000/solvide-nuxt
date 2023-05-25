@@ -8,7 +8,7 @@
                 <h2>DESIGN<br> WITH YOUR VISION</h2>
             </div>
             <div class="main-contact-btn">
-                <button>CONTACT</button>
+                <router-link to="/contact" class="Mbutton">CONTACT</router-link>
             </div>
         </div>
         <div class="nkv-parallax-bg">

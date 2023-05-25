@@ -1,5 +1,5 @@
 <template>
-    <section class="NContact">
+    <section class="NContact Contactback">
         <div class="NContact__title">
             <div class="Ntitle">
                 <h2>CONTACT</h2>
@@ -16,7 +16,7 @@
         </div>
         <div class="NContact__button">
             <div class="main-contact-btn">
-                <button>CONTACT</button>
+                <router-link to="/contact" class="Mbutton">CONTACT</router-link>
             </div>
         </div>
     </section>

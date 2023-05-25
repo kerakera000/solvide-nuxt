@@ -65,7 +65,7 @@
                 </div>
                 <div class="Nabout__contact--box--empty2">
                     <div class="main-contact-btn">
-                        <button>VIEW MORE</button>
+                        <router-link to="/about" class="Mbutton">VIEW MORE</router-link>
                     </div>
                 </div>
             </div>
