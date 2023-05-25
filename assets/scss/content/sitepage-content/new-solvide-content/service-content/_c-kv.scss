@@ -7,9 +7,10 @@
     height: 90rem;
     margin: 0rem calc(50% - 50vw) 0;
     padding: 0 8rem;
-    background-color: #F5F5F5;
+    position: relative;
     @include flex.flex($justify-content:flex-start);
     flex-direction: column;
+    z-index: 2;
     @media screen and (max-width: 768px) {
         height: auto;
     }
@@ -17,6 +18,8 @@
         width: 99%;
         height: auto;
         margin-top: 16rem;
+        position: relative;
+        z-index: 2;
         @include flex.flex($justify-content:flex-start);
         @include title.newtitle($justfit:flex-start,$aligin:flex-start);
         @media screen and (max-width: 768px) {
@@ -28,6 +31,8 @@
         width: 100%;
         height: 100%;
         margin-top: 5rem;
+        position: relative;
+        z-index: 2;
         @include flex.flex($align-items:flex-start,$justify-content:flex-end);
         @media screen and (max-width: 768px) {
             order: 3;
@@ -59,7 +64,7 @@
                 }
             }
             p{
-                width: 66rem;
+                width: 73rem;
                 margin-top: 2rem;
                 @include font.font-Notosan-Medium($fontsize:2rem,$lineHeight:4rem);
             }
@@ -70,6 +75,7 @@
         left: 5%;
         position: fixed;
         z-index: 999;
+        z-index: 2;
         @media screen and (max-width: 768px) {
             position: inherit;
             order: 2;
@@ -86,11 +92,51 @@
             li{
                 list-style: circle;
                 @include font.font-Notosan-Bold($fontsize:2rem);
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                    color: #C348FA;
+                    cursor: pointer;
+                }
             }
         }
     }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+        background-color: #F5F5F5;
+        clip-path: polygon(70% 0%, 100% 60%, 100% 100%, 0 100%, 0 0%);
+    }
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -3;
+        animation: backcolor 3s infinite;
+        animation-direction: alternate-reverse;
+    }
 }
-
+@keyframes backcolor {
+    0% {
+        background-color: #8524D9;
+    }
+    50% {
+        background-color: #C348FA;
+    }
+    100% {
+        background-color: #31C4E6;
+    }
+}
 @keyframes color-change {
     0% {
         background-position: 100% 50%;
