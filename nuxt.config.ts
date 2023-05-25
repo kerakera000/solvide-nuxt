@@ -1,10 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    ssr: true,
     app: {
     head: {
         htmlAttrs: {
         lang: 'ja'
-        },
+            },
+        title: "My Blog",
         meta: [
             { property: 'og:type', content: 'website' },
             { property: 'og:site_name', content: '<サイト名>' },

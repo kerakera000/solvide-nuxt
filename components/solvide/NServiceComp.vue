@@ -60,7 +60,7 @@
 
         <div class="Nservice__button">
             <div class="main-contact-btn">
-                <router-link to="/contact" class="Mbutton">VIEW MORE</router-link>
+                <router-link to="/service" class="Mbutton">VIEW MORE</router-link>
             </div>
         </div>
     </div>
