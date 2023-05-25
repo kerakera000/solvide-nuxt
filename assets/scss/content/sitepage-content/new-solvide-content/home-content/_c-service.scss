@@ -30,6 +30,21 @@
             @media screen and (max-width: 768px) {
                 display: contents;
             }
+            .NewService-img1 {
+                background-image: url(/assets/new-solvide-images/home-images/service-images/1service.png);
+            }
+
+            .NewService-img2 {
+                background-image: url(/assets/new-solvide-images/home-images/service-images/2service.png);
+            }
+
+            .NewService-img3 {
+                background-image: url(/assets/new-solvide-images/home-images/service-images/3service.png);
+            }
+
+            .NewService-img4 {
+                background-image: url(/assets/new-solvide-images/home-images/service-images/4service.png);
+            }
             .fNservice{
                 width: 50%;
                 height: 40rem;
@@ -92,43 +107,40 @@
                             border-radius: 6rem;
                         }
                     }
-                    button:hover{
+                    button::after{
+                        content: "";
+                        position: absolute;
+                        width: 8rem;
+                        height: 8rem;
+                        z-index: 10;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        transition: 0.3s;
+                        background-image: url(/assets/images/icon/arowviolet.svg);
+                        background-size: 30%;
+                        background-repeat: no-repeat;
+                        background-position: 50%, 0;
+                        @media screen and (max-width: 768px) {
+                            color: white;
+                            background-image: url(/assets/images/icon/arowwhite.svg);
+                            background-size: 50%;
+                        }
+                    }
+                }
+                &:hover{
+                    button{
                         background-color: #D16EFD;
                         border: 2px solid white;
                         transition: 0.3s;
                     }
-                    button::after{
-                        content: ">";
-                        color: #D16EFD;
-                        position: absolute;
-                        z-index: 10;
-                        top: 50%;
-                        left: 50%;
-                        font-size: 2.5rem;
-                        transform: translate(-50%,-50%);
-                        transition: 0.3s;
-                        @media screen and (max-width: 768px) {
-                            font-size: 4rem;
-                            color: white;
-                        }
-                    }
-                    button:hover::after{
-                        transition: 0.3s;
-                        color: white;
+                    button::after {
+                        background-image: url(/assets/images/icon/arowwhite.svg);
+                        background-size: 30%;
+                        background-repeat: no-repeat;
+                        background-position: 50%, 0;
                     }
                 }
-            }
-            .NewService-img1{
-                background-image: url(/assets/new-solvide-images/home-images/service-images/1service.png);
-            }
-            .NewService-img2{
-                background-image: url(/assets/new-solvide-images/home-images/service-images/2service.png);
-            }
-            .NewService-img3{
-                background-image: url(/assets/new-solvide-images/home-images/service-images/3service.png);
-            }
-            .NewService-img4{
-                background-image: url(/assets/new-solvide-images/home-images/service-images/4service.png);
             }
         }
     }

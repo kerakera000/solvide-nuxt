@@ -12,11 +12,11 @@
     &__title{
         width: auto;
         height: auto;
-        margin-top: 20rem;
+        margin-top: 10rem;
         @include title.newtitle();
     }
     &__cnt{
-        width: 70%;
+        width: 80%;
         height: auto;
         margin-top: 10rem;
         @include flex.flex($gap:6%);

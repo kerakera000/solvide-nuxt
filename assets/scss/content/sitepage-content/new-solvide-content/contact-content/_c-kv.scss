@@ -1,0 +1,297 @@
+@use "../../../../foundation/base/f-font-family" as font;
+@use "../../../../foundation/mixin/f-flex" as flex;
+@use "../../../../foundation/class-mixin/f-newcube" as newcube;
+@use "../../../../foundation/class-mixin/f-newbutton" as newbutton;
+
+
+.Ccontact{
+    width: 100%;
+    height: auto;
+    position: relative;
+    @include flex.flex();
+    flex-direction: column;
+    .Cbackground{
+        width: 100%;
+        height: 100svh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: transparent linear-gradient(142deg, #8524D9 30%, #C348FA 50%, #8805c4 100%) 0% 0% no-repeat padding-box;
+        &__cnt{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .Cball1{
+                width: 70rem;
+                height: 70rem;
+                background: transparent radial-gradient(closest-side at 50% 50%, #CF9CF0 0%, #a525eb 100%) 0% 0% no-repeat padding-box;
+                filter: blur(1px);
+                border-radius: 50%;
+            }
+            .Cball2{
+                width: 40rem;
+                height: 40rem;
+                background: transparent radial-gradient(closest-side at 50% 50%, #A07FEB 0%, #6b47e2 100%, #A354F1 100%) 0% 0% no-repeat padding-box;
+                filter: blur(1px);
+                border-radius: 50%;
+                position: absolute;
+                right: 5%;
+                bottom: 3%;
+            }
+        }
+    }
+    .Ctitle{
+        margin-top: 14.1rem;
+        width: auto;
+        height: auto;
+        @include flex.flex();
+        flex-direction: column;
+        @media screen and (max-width: 768px) {
+            margin-top: 40rem;
+        }
+        h1{
+            color: white;
+            @include font.font-Oswald-SemiBold($fontsize:7rem,$letterSpacing:1.2px);
+        }
+        p{
+            color: white;
+            margin-bottom: 5px;
+            @include font.font-Notosan-Bold($fontsize:1.6rem);
+        }
+        span{
+            width: 8.3rem;
+            height: 2px;
+            background: transparent linear-gradient(269deg, #FFFFFF 0%, #C348FA 100%) 0% 0% no-repeat padding-box;
+        }
+    }
+
+    .form {
+        width: 100%;
+        height: auto;
+        margin-top: 9rem;
+        @include flex.flex();
+        &__content {
+            width: 60%;
+            @include flex.flex($align-items: flex-start, $gap: 4rem);
+            flex-direction: column;
+
+            @media screen and (max-width: 768px) {
+                gap: 6rem;
+                width: 85%;
+            }
+
+            &--flex {
+                width: 100%;
+                height: 10rem;
+                @include flex.flex($align-items:flex-start,$justify-content: flex-end, $gap: 1rem);
+                flex-direction: column;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 2rem;
+                    height: 15rem;
+                }
+
+                .form-text {
+                    width: auto;
+                    @include font.font-Notosan-Regular($fontsize: 2.4rem);
+                    color: white;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        font-size: 4rem;
+                    }
+
+                    span {
+                        margin-left: 1rem;
+                        color: #db2d2d;
+                    }
+                }
+
+                .form-box {
+                    width: 100%;
+                    height: 1px;
+                    transition: 0.4s;
+                    border: 1px solid #FFFFFF;
+                    @include flex.flex($justify-content: flex-start);
+                    @include font.font-Notosan-Regular($fontsize: 2rem);
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        height: 13rem;
+                    }
+
+                    .min {
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+                        width: 100%;
+                        height: 100%;
+                        color: rgb(12, 12, 12);
+                        background-color: rgb(232, 240, 254);
+                        @media screen and (max-width: 768px) {
+                            font-size: 4rem;
+                        }
+
+                        &:focus {
+                            outline: solid 2px #C348FA;
+                        }
+                        option{
+                            height: 8rem;
+                        }
+                    }
+
+                    &.select {
+                        width: 100%;
+                        padding-right: 4rem;
+                        justify-content: flex-end;
+                        position: relative;
+                        select{
+                            appearance: none;
+                            -moz-appearance: none;
+                            -webkit-appearance: none;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            border-radius: 0px;
+                            transform: translate(-50%, -50%);
+                            background-color: rgb(232, 240, 254);
+                            option {
+                                width: 100%;
+                                height: 5.6rem;
+                                padding: 2rem 0;
+                                color: rgb(102, 95, 95);
+                                font-size: 3rem;
+                                &:checked{
+                                    background-color: #510096;
+                                    color: white;
+                                }
+                                &:hover{
+                                    background-color: #510096 !important;
+                                    color: white;
+                                }
+                            }
+                        }
+
+                        div {
+                            width: 1rem;
+                            height: 2rem;
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            transform: rotate(270deg);
+                            background-image: url(/wp-content/themes/testsite/images/icon/under.svg);
+
+                            @media screen and (max-width: 768px) {
+                                // font-size: 4rem;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .form-box{
+                        height: 15rem;
+                        background: #FFFFFF1A 0% 0% no-repeat padding-box;
+                        opacity: 1;
+                        backdrop-filter: blur(30px);
+                        -webkit-backdrop-filter: blur(30px);
+                    }
+                }
+            }
+
+            &--flex-large {
+                width: 100%;
+                height: 40rem;
+                // margin-top: 5rem;
+                @include flex.flex($justify-content: flex-start, $align-items: flex-start, $gap: 2rem);
+                flex-direction: column;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 2rem;
+                    height: auto;
+                }
+
+                .form-text {
+                    width: auto;
+                    @include font.font-Notosan-Regular($fontsize: 2.2rem);
+                    color: white;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        font-size: 4rem;
+                    }
+
+                    span {
+                        color: #db2d2d;
+                        margin-left: 1rem;
+                    }
+                }
+
+                .form-box-large {
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FFFFFF1A;
+                    @include flex.flex($justify-content: flex-start, $align-items: flex-start);
+                    // @include font.font-Notosan-Regular($fontsize: 1.5rem);
+                    font-size: 1.5rem;
+
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        height: 60rem;
+                    }
+
+                    .large {
+                        padding: 1rem;
+                        width: 100%;
+                        height: 100%;
+                        @include font.font-Notosan-Regular($fontsize: 2rem);
+                        border: 2px solid #FFFFFF;
+                        background-color: rgb(232, 240, 254);
+                        @media screen and (max-width: 768px) {
+                            font-size: 4rem;
+                        }
+
+                        &:focus {
+                            outline: solid 2px #5c76f600;
+                        }
+                    }
+                }
+            }
+
+            .radio{
+                width: 100%;
+                height: auto;
+                @include flex.flex($gap:2rem,$align-items: flex-end);
+                @media screen and (max-width: 768px) {
+                    gap: 6rem;
+                }
+                &__button{
+                    width: 1.9rem;
+                    height: 1.9rem;
+                    border: 1.5px solid #FFFFFF;
+                    @media screen and (max-width: 768px) {
+                        width: 3.7rem;
+                        height: 3.7rem;
+                    }
+                    &:checked {
+                        background-color: #31C4E6;
+                    }
+                }
+                &__text{
+                    @include font.font-Notosan-Regular($fontsize: 2rem);
+                    color: white;
+                    @media screen and (max-width: 768px) {
+                        font-size: 4rem;
+                    }
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .form-submit-box {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 16rem;
+                @include flex.flex();
+            }
+        }
+    }
+}
