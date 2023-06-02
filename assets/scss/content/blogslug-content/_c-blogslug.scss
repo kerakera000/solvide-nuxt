@@ -1,0 +1,127 @@
+@use "../../foundation/mixin/f-flex" as flex;
+@use "../../foundation/base/f-font-family" as font;
+
+.blogslug{
+    width: 100%;
+    padding: 5rem 3% 0 3%;
+    @include flex.flex($align-items:flex-start,$gap:5rem);
+    &__main{
+        width: 50%;
+        padding-top: 4%;
+        &--kv{
+            width: 100%;
+            height: 55rem;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+            }
+        }
+        h1{
+            margin-top: 5rem;
+            @include font.font-roboto-bold($fontsize:4rem);
+        }
+        &--cate{
+            @include font.font-Notosan-Regular($fontsize:1.4rem);
+            border: 1px solid rgb(226, 43, 211);
+            color: rgb(226, 43, 211);
+            width: 11rem;
+            padding: 0.2rem 0 ;
+            margin-top: 1rem;
+            @include flex.flex();
+        }
+        &--day{
+            @include font.font-Notosan-Medium($fontsize:1.4rem);
+            @include flex.flex($justify-content:flex-start,$gap:0.5rem);
+            color: #6b6a6a;
+            margin-top: 1rem;
+            &--timeicon{
+                width: 2rem;
+                height: 2rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &--post{
+            width: 100%;
+            margin: 5rem 0;
+            .imgbox{
+                width: 100%;
+                height: auto;
+                img{
+                    width: 100%;
+                }
+            }
+            h2{
+                @include font.font-Oswald-Bold($fontsize:3rem);
+                @include flex.flex($justify-content:flex-start);
+                padding-left: 2rem;
+                color: rgb(43, 44, 48);
+                background-color: rgb(238, 238, 238);
+                height: 7rem;
+                margin: 2rem 0;
+                border-radius: 0.5rem;
+            }
+            p{
+                @include font.font-Notosan-Medium($fontsize:2.2rem,$lineHeight:4rem);
+                color: rgb(43, 44, 48);
+            }
+            a{
+                @include font.font-Notosan-Medium($fontsize:2.2rem,$lineHeight:4rem);
+                color: rgb(43, 44, 48);
+                text-decoration: underline;
+            }
+        }
+    }
+    &__sub{
+        width: 23%;
+        height: 150vw;
+        overflow-y: auto;
+        @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:0rem);
+        flex-direction: column;
+        padding-top: 4%;
+        /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+        -ms-overflow-style: none;
+        /*Firefoxへの対応*/
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .Nblogs__cnt--box{
+            &--blog-col{
+                height: auto;
+                padding: 0 5% 7%;
+                flex-direction: column;
+                background: #ffffff00 ;
+                box-shadow: 0px 0px 0px;
+                gap: 0.7rem;
+                &:hover{
+                    transform: scale(1.05);
+                }
+                .Nblogs-img{
+                    width: 100%;
+                    height: 24rem;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1019607843);
+                    border-radius: 1rem;
+                    transition: 0.3s;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                    }
+                }
+                .Nblogs-text{
+                    width: 100%;
+                    height: auto;
+                    &--day{
+                        margin-bottom: 0.5rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

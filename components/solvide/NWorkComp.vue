@@ -8,25 +8,14 @@
             </div>
         </div>
         <div class="Nwork__cnt">
-            <div class="Nwork__cnt--card">
+            <div v-for="article in data.contents.filter(item => item.category.name === 'サイト制作').slice(0, 2)" :key="article.id" class="Nwork__cnt--card">
                 <div class="Nwork__cnt--card--img">
-                    <img src="../../assets/images/works-img/l-webdesine.png" alt="">
+                    <img :src="article.eyecatch.url" alt="">
                 </div>
                 <div class="Nwork__cnt--card--day">
-                    <p>2023.3.10</p>
-                    <p class="Nwork__cnt--card--day--text"><span>・</span>コーポレートサイト制作</p>
+                    <p class="Nwork__cnt--card--day--text"><span>・</span>{{article.category.name}}</p>
                 </div>
-                <h3 class="Nwork__cnt--card--title">UNCHAIN様</h3>
-            </div>
-            <div class="Nwork__cnt--card">
-                <div class="Nwork__cnt--card--img">
-                    <img src="../../assets/images/works-img/l-webdesine.png" alt="">
-                </div>
-                <div class="Nwork__cnt--card--day">
-                    <p>2023.3.10</p>
-                    <p class="Nwork__cnt--card--day--text"><span>・</span>コーポレートサイト制作</p>
-                </div>
-                <h3 class="Nwork__cnt--card--title">UNCHAIN様</h3>
+                <h3 class="Nwork__cnt--card--title">{{ article.title }}</h3>
             </div>
         </div>
         <div class="Nwork__text">
@@ -35,16 +24,25 @@
         </div>
         <div class="Nwork__button">
             <div class="main-contact-btn">
-                <router-link to="/contact" class="Mbutton">VIEW MORE</router-link>
+                <router-link to="/contact" class="Mbutton">CONTACT</router-link>
             </div>
         </div>
     </section>
 </template>
 
-<script>
-export default {
-    name: 'NWorkComp',
-}
+<script setup>
+
+    const formatDate = (date) => {
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        return new Date(date).toLocaleDateString('ja-JP', options).replace(/\//g, '/');
+    };
+
+    const { data } = await useFetch(`/blogs`, {
+        baseURL: "https://solvide.microcms.io/api/v1",
+        headers: {
+            "X-MICROCMS-API-KEY": "A8OTP6XIr8kNjkXW5MENxUSGvneZXO1mfO29",
+        },
+    });
 </script>
 
 <style></style>

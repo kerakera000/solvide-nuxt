@@ -4,9 +4,7 @@
             <div class="Nabout__news--box">
                 <p class="Nabout-day">2023.4.30</p>
                 <p class="Nabout-text">ホームページをオープンしました。</p>
-                <a href="" class="Nabout-view-more">
-                    VIEW MORE
-                </a>
+                <router-link to="/news" class="Nabout-view-more">VIEW MORE</router-link>
             </div>
         </div>
         <div class="Nabout__title">

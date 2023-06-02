@@ -13,8 +13,8 @@
                 <p class="p" @click="handleCategoryClick('news')">ニュース</p>
                 <p class="p" @click="handleCategoryClick('blog')">ブログ</p>
             </div>
-            <div v-if="selectedCategory === '' || selectedCategory === 'all'" class="blogsapibox news">
-                <div class="Nblogs__cnt--box" v-for="article in data.contents.slice(0, 4)" :key="article.id">
+            <div v-show="selectedCategory === '' || selectedCategory === 'all'" class="blogsapibox blogs">
+                <div v-for="article in data.contents.slice(0, 4)" :key="article.id" class="Nblogs__cnt--box">
                     <nuxt-link :to="`/${article.id}`" class="Nblogs__cnt--box--blog-col">
                         <div class="Nblogs-img">
                             <img :src="article.eyecatch.url" alt="">
@@ -26,8 +26,8 @@
                     </nuxt-link>
                 </div>
             </div>
-            <div v-if="selectedCategory === '' || selectedCategory === 'news'" class="blogsapibox news">
-                <div class="Nblogs__cnt--box" v-for="article in data.contents.filter().slice(0, 4)" :key="article.id">
+            <div v-show="selectedCategory === '' || selectedCategory === 'news'" class="blogsapibox news">
+                <div v-for="article in data.contents.filter(item => item.category.name === 'ニュース').slice(0, 4)" :key="article.id" class="Nblogs__cnt--box">
                     <nuxt-link :to="`/${article.id}`" class="Nblogs__cnt--box--blog-col">
                         <div class="Nblogs-img">
                             <img :src="article.eyecatch.url" alt="">
@@ -39,8 +39,8 @@
                     </nuxt-link>
                 </div>
             </div>
-            <div v-if="selectedCategory === '' || selectedCategory === 'blog'" class="blogsapibox blogs">
-                <div class="Nblogs__cnt--box" v-for="article in data.contents.slice(0, 4)" :key="article.id">
+            <div v-show="selectedCategory === '' || selectedCategory === 'blog'" class="blogsapibox blogs">
+                <div v-for="article in data.contents.filter(item => item.category.name === 'NUXT-blog').slice(0, 4)" :key="article.id" class="Nblogs__cnt--box">
                     <nuxt-link :to="`/${article.id}`" class="Nblogs__cnt--box--blog-col">
                         <div class="Nblogs-img">
                             <img :src="article.eyecatch.url" alt="">
@@ -95,10 +95,12 @@
         selectedCategory.value = category; // 選択されたカテゴリーを更新
     };
 
-    const { data } = await useFetch(`/blogs?filters=category[equals]${selectedCategory.value}`, {
-        baseURL: "https://solvide.microcms.io/api/v1",
+    const config = useRuntimeConfig();
+
+    const { data } = await useFetch(`/blogs`, {
+        baseURL: config.baseUrl,
         headers: {
-            "X-MICROCMS-API-KEY": "A8OTP6XIr8kNjkXW5MENxUSGvneZXO1mfO29",
+            "X-MICROCMS-API-KEY": config.apiKey,
         },
     });
 

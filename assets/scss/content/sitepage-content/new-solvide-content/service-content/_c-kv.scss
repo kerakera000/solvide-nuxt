@@ -13,6 +13,7 @@
     z-index: 2;
     @media screen and (max-width: 768px) {
         height: auto;
+        padding: 0 5rem;
     }
     &__title{
         width: 99%;
@@ -25,6 +26,7 @@
         @media screen and (max-width: 768px) {
             width: 100%;
             order: 1;
+            margin-top: 25rem;
         }
     }
     &__content{
@@ -37,6 +39,7 @@
         @media screen and (max-width: 768px) {
             order: 3;
             justify-content: flex-start;
+            margin-top: 10rem;
         }
         &--text{
             width:75%;
@@ -46,19 +49,23 @@
                 height: auto;
             }
             h2{
-                @include font.font-Oswald-SemiBold($fontsize:8.8rem,$letterSpacing:3.5px);
+                @include font.font-Oswald-SemiBold($fontsize:10rem,$letterSpacing:3.5px);
                 background-image: linear-gradient(to right, gray, rgb(153, 0, 255), gray, rgb(153, 0, 255), gray);
                 background-size: 500%;
                 animation: color-change 6s linear infinite;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 @media screen and (max-width: 768px) {
-                    font-size: 6.8rem;
+                    font-size: 8rem;
                 }
             }
             h3{
                 margin-top: 2rem;
                 @include font.font-Notosan-Bold($fontsize:4rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 5rem;
+                    margin-top: 5rem;
+                }
                 span{
                     color: #C348FA;
                 }
@@ -66,7 +73,14 @@
             p{
                 width: 73rem;
                 margin-top: 2rem;
-                @include font.font-Notosan-Medium($fontsize:2rem,$lineHeight:4rem);
+                @include font.font-Notosan-Medium($fontsize:2.2rem,$lineHeight:4rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 4rem;
+                    margin-top: 4rem;
+                    line-height: 8rem;
+                    width: 100%;
+                    margin-bottom: 15rem;
+                }
             }
         }
     }
@@ -80,6 +94,7 @@
             position: inherit;
             order: 2;
             width: 100%;
+            margin-top: 7rem;
         }
         &--list{
             @include flex.flex($justify-content:flex-start,$align-items:flex-start,$gap:3rem);
@@ -93,6 +108,9 @@
                 list-style: circle;
                 @include font.font-Notosan-Bold($fontsize:2rem);
                 transition: 0.3s;
+                @media screen and (max-width: 768px) {
+                    font-size: 4rem;
+                }
                 &:hover{
                     transform: scale(1.1);
                     color: #C348FA;
@@ -112,6 +130,9 @@
         z-index: 1;
         background-color: #F5F5F5;
         clip-path: polygon(70% 0%, 100% 60%, 100% 100%, 0 100%, 0 0%);
+        @media screen and (max-width: 768px) {
+            clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0 100%, 0 0%);
+        }
     }
     &::before{
         content: "";

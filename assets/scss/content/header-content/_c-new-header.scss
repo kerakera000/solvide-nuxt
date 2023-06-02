@@ -37,11 +37,11 @@
             &--title{
                 .title-box{
                     display: block;
-                    width: 24rem;
-                    height: 6rem;
+                    width: 19rem;
+                    height: 4rem;
                     @media screen and (max-width: 768px) {
-                        width: 35rem;
-                        height: 10rem;
+                        width: 33rem;
+                        height: 7rem;
                         position: relative;
                         z-index: 999;
                     }
