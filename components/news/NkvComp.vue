@@ -1,6 +1,6 @@
 <template>
     <section id="Newtop" class="Nblogs Nblog">
-        <div class="Nblogs__title">
+        <div class="Nblogs__title Nkvtitle">
             <div class="Ntitle">
                 <h2>{{ getCategoryTitle(selectedCategory) }}</h2>
                 <p>{{ getCategoryText(selectedCategory) }}</p>
@@ -60,6 +60,7 @@
     import { ref } from 'vue';
 
     const selectedCategory = ref('news'); // 初期値を 'blog' に設定
+    const config = useRuntimeConfig();
 
     const formatDate = (date) => {
         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
@@ -91,9 +92,9 @@
     };
 
     const { data } = await useFetch(`/blogs`, {
-        baseURL: "https://solvide.microcms.io/api/v1",
+        baseURL: config.baseUrl,
         headers: {
-            "X-MICROCMS-API-KEY": "A8OTP6XIr8kNjkXW5MENxUSGvneZXO1mfO29",
+            "X-MICROCMS-API-KEY": config.apiKey,
         },
     });
 </script>

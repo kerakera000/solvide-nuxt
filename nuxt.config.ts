@@ -1,4 +1,5 @@
 // import { defineNuxtConfig } from "nuxt";
+// import { sortRoutes } from '@nuxt/utils'
 const { API_KEY, SERVICE_DOMAIN } = process.env;
 
 export default defineNuxtConfig({
@@ -38,4 +39,4 @@ export default defineNuxtConfig({
         },
     },
     css: ['/assets/css/style.css'],
-})
+});

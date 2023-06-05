@@ -17,6 +17,7 @@
         @include title.newtitle($justfit:flex-start,$aligin:flex-start);
         @media screen and (max-width: 768px) {
             width: 90%;
+            margin-top: 20rem;
         }
     }
     &__cnt{

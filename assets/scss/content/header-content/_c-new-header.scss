@@ -80,6 +80,7 @@
                 right: 30%;
                 width: 11rem;
                 height: 11rem;
+                transition: width 0.2s, right 0.2s,;
             }
             .Newnav-list{
                 color: white;
@@ -98,14 +99,14 @@
             top: 50%;
             transform: translate(40%,-50%);
             position: absolute;
-            height: 4rem;
-            width: 4rem;
+            height: 3rem;
+            width: 3rem;
             @include flex.flex();
             z-index: 10;
             @media screen and (max-width: 768px) {
-                transform: translate(4%, -50%);
-                height: 6rem;
-                width: 7rem;
+                transform: translate(-16%, -50%);
+                height: 5rem;
+                width: 5rem;
             }
             .Newheader-spanbox{
                 width: 100%;
@@ -114,14 +115,14 @@
                 @include flex.flex($justify-content:space-around,$align-items:center);
                 position: relative;
                 span{
-                    width: 4rem;
+                    width: 3rem;
                     height: 2px;
                     display: block;
                     transition: 0.2s;
                     transform-origin:center;
                     background: transparent linear-gradient(93deg, #8524D9 0%, #C348FA 23%, #31C4E6 100%) 0% 0% no-repeat padding-box;
                     @media screen and (max-width: 768px) {
-                        width: 6rem;
+                        width: 5rem;
                         height: 1px;
                     }
                 }
@@ -218,9 +219,9 @@
                     }
                 }
                 .Newheader__cnt--button.funk{
-                    right: 5%;
-                    height: 8rem;
-                    width: 8rem;
+                    right: 2%;
+                    height: 11rem;
+                    width: 11rem;
                     border: 1px solid #8524D9;
                     z-index: 997;
                     border-image: linear-gradient(to bottom, #8524D9 0%, #C348FA 100%) 1;
