@@ -1,9 +1,9 @@
 <template>
-    <section class="NSFlow">
+    <section id="serviceflow" class="NSFlow">
         <div class="NSFlow__title">
             <div class="Ntitle">
-                <h2>BLOGS</h2>
-                <p>ブログ記事</p>
+                <h2>FLOW</h2>
+                <p>制作フロー</p>
                 <span></span>
             </div>
         </div>

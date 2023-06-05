@@ -4,7 +4,7 @@
             <div class="Newheader__cnt--box">
                 <h1 class="Newheader__cnt--box--title">
                     <router-link to="/" class="title-box">
-                        <img src="../../assets/new-solvide-images/logo-images/logo.png" alt="">
+                        <img src="../../assets/new-solvide-images/logo-images/NewLogoTW.png" alt="">
                     </router-link>
                 </h1>
                 <div class="Newheader__cnt--box--contact">

@@ -48,11 +48,14 @@
         @include flex.flex();
         flex-direction: column;
         @media screen and (max-width: 768px) {
-            margin-top: 40rem;
+            margin-top: 28rem;
         }
         h1{
             color: white;
             @include font.font-Oswald-SemiBold($fontsize:7rem,$letterSpacing:1.2px);
+            @media screen and (max-width: 768px) {
+                font-size: 8rem;
+            }
         }
         p{
             color: white;
@@ -283,6 +286,9 @@
                     a{
                         text-decoration: underline;
                     }
+                }
+                .asta{
+                    color: red;
                 }
             }
 

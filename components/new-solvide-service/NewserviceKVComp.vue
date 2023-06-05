@@ -1,6 +1,6 @@
 <template>
-    <section class="NserviceKV">
-        <div class="NserviceKV__title">
+    <section id="servicetop" class="NserviceKV">
+        <div id="Newtop" class="NserviceKV__title">
             <div class="Ntitle">
                 <h2>SERVICE</h2>
                 <p>サービス内容</p>
@@ -20,9 +20,9 @@
         </div>
         <div class="NserviceKV__nav">
             <ul class="NserviceKV__nav--list">
-                <li>TOP</li>
-                <li>サービス内容</li>
-                <li>制作フロー</li>
+                <li @click="scrollTo('servicetop')">TOP</li>
+                <li @click="scrollTo('servicescnt')">サービス内容</li>
+                <li @click="scrollTo('serviceflow')">制作フロー</li>
             </ul>
         </div>
     </section>
@@ -30,8 +30,18 @@
 
 <script>
     export default {
-        name: 'NServiceComp',
-    }
+        methods: {
+            scrollTo(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                window.scrollTo({
+                top: element.offsetTop - 80, // 上部から5remの余白を考慮
+                behavior: 'smooth'
+                });
+            }
+            }
+        }
+    };
 </script>
 
 <style lang="scss">

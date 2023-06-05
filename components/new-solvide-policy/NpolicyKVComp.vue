@@ -1,5 +1,5 @@
 <template>
-    <section class="NPkv">
+    <section id="Newtop" class="NPkv">
         <div class="NPkv__title">
             <h2>ABOUT US</h2>
             <p>私たちについて</p>

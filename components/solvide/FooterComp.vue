@@ -4,7 +4,7 @@
             <div class="Nfooter__cnt--logo-box">
                 <div class="Nfooter-logo">
                     <div class="Nfooter-logo--img">
-                        <img src="../../assets/new-solvide-images/logo-images/logo.png" alt="">
+                        <img src="../../assets/new-solvide-images/logo-images/NewLogo.png" alt="">
                     </div>
                 </div>
                 <div class="Nfooter-sns">
@@ -25,8 +25,9 @@
                 <div class="Nfooter-text">
                     <h3>サービス内容</h3>
                     <p>― Web制作</p>
-                    <p>― リニューアル</p>
-                    <p>― サイト保守／運用</p>
+                    <p>― LP制作</p>
+                    <p>― 保守／運用</p>
+                    <p>― HD lessCMS</p>
                 </div>
             </div>
             <div class="Nfooter__cnt--col">

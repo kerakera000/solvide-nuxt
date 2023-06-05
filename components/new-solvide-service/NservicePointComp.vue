@@ -1,5 +1,5 @@
 <template>
-    <section class="NSPoint">
+    <section id="servicescnt" class="NSPoint">
         <div class="NSPoint__content">
             <div class="NSPoint__content--img">
                 <div class="NSPimg1">
