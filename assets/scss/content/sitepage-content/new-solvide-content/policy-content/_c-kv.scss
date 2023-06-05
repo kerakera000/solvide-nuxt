@@ -18,19 +18,20 @@
         padding-left: 14rem;
         @include flex.flex($justify-content:flex-start,$gap:2rem,$align-items:flex-end);
         @media screen and (max-width: 768px) {
-            margin-top: 15rem;
-            padding-left: 7rem;
+            margin-top: 5rem;
+            padding-left: 5rem;
         }
         h2{
             @include font.font-Oswald-SemiBold($fontsize:2.8rem);
             @media screen and (max-width: 768px) {
-                font-size: 4rem;
+                font-size: 6rem;
             }
         }
         p{
             @include font.font-Oswald-SemiBold($fontsize:1.4rem);
             @media screen and (max-width: 768px) {
-                font-size: 1.6rem;
+                font-size: 3rem;
+                transform: translate(0rem,-1rem);
             }
         }
     }
@@ -40,7 +41,7 @@
         @include flex.flex();
         @media screen and (max-width: 768px) {
             flex-direction: column;
-            padding: 15rem 7rem 8rem;
+            padding: 15rem 5rem 8rem;
             gap: 8rem;
         }
         &--text{
@@ -59,9 +60,15 @@
                 }
                 h2{
                     @include font.font-Oswald-SemiBold($fontsize:6rem);
+                    @media screen and (max-width: 768px) {
+                        font-size: 8rem;
+                    }
                 }
                 p{
                     @include font.font-Notosan-Bold($fontsize:1.6rem);
+                    @media screen and (max-width: 768px) {
+                        font-size: 3rem;
+                    }
                 }
                 div{
                     width: 8.3rem;
@@ -82,7 +89,7 @@
                     @include font.font-roboto-regular($fontsize:2.2rem,$lineHeight:5.6rem,$letterSpacing:0.7px);
                     color: white;
                     @media screen and (max-width: 768px) {
-                        line-height: 7rem;
+                        line-height: 8rem;
                         font-size: 4rem;
                     }
                 }

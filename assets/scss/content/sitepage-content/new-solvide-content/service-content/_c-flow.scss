@@ -8,24 +8,32 @@
     background-color: #F5F5F5;
     @include flex.flex($justify-content:flex-end,$align-items:flex-end);
     flex-direction: column;
+    padding-right: 5rem;
+    @media screen and (max-width: 768px) {
+        padding-left: 5rem;
+    }
     &__title{
-        width: 74%;
+        width: 76%;
         height: auto;
         margin-top: 13rem;
         @include flex.flex($justify-content:flex-start);
         @include title.newtitle($justfit:flex-start,$aligin:flex-start);
         @media screen and (max-width: 768px) {
-            width: 90%;
+            width: 100%;
+            margin-top: 20rem;
         }
     }
     &__content{
-        width: 74%;
+        width: 76%;
         height: auto;
         margin-top: 6rem;
         margin-bottom: 12rem;
         padding-bottom: 1rem;
         overflow-x: scroll;
         @include flex.flex($justify-content:flex-start);
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
         &::-webkit-scrollbar {
             height: 6px;
         }
@@ -50,13 +58,23 @@
                 height: auto;
                 @include flex.flex($justify-content:flex-start,$align-items:flex-start);
                 flex-direction: column;
+                @media screen and (max-width: 768px) {
+                    width: 21rem;
+                }
                 h3{
                     padding-left: 1.4rem;
                     @include font.font-Oswald-Bold($fontsize:2.4rem);
+                    @media screen and (max-width: 768px) {
+                        font-size: 4rem;
+                    }
                 }
                 &--img{
                     width: 15rem;
                     height: 15rem;
+                    @media screen and (max-width: 768px) {
+                        width: 22rem;
+                        height: 22rem;
+                    }
                     img{
                         width: 100%;
                         height: 100%;
@@ -72,6 +90,10 @@
                 position: relative;
                 @include flex.flex();
                 @include font.font-Notosan-Medium($fontsize:1.9rem);
+                @media screen and (max-width: 768px) {
+                    width: 37rem;
+                    height: 10rem;
+                }
                 &::after{
                     content: '';
                     position: absolute;
@@ -83,6 +105,9 @@
                     height: 100%;
                     background-color: #761CC4;
                     clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                    @media screen and (max-width: 768px) {
+                        right: -7%;
+                    }
                 }
             }
 
@@ -95,6 +120,10 @@
                 position: relative;
                 @include flex.flex();
                 @include font.font-Notosan-Medium($fontsize:1.9rem);
+                @media screen and (max-width: 768px) {
+                    width: 37rem;
+                    height: 10rem;
+                }
                 &::after{
                     content: '';
                     position: absolute;
@@ -106,6 +135,9 @@
                     height: 100%;
                     background-color: #8147C8;
                     clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                    @media screen and (max-width: 768px) {
+                        right: -7%;
+                    }
                 }
             }
 
@@ -118,6 +150,10 @@
                 position: relative;
                 @include flex.flex();
                 @include font.font-Notosan-Medium($fontsize:1.9rem);
+                @media screen and (max-width: 768px) {
+                    width: 37rem;
+                    height: 10rem;
+                }
                 &::after{
                     content: '';
                     position: absolute;
@@ -129,6 +165,9 @@
                     height: 100%;
                     background-color: #9363E0;
                     clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                    @media screen and (max-width: 768px) {
+                        right: -7%;
+                    }
                 }
             }
 
@@ -141,6 +180,10 @@
                 position: relative;
                 @include flex.flex();
                 @include font.font-Notosan-Medium($fontsize:1.9rem);
+                @media screen and (max-width: 768px) {
+                    width: 37rem;
+                    height: 10rem;
+                }
                 &::after{
                     content: '';
                     position: absolute;
@@ -152,6 +195,9 @@
                     height: 100%;
                     background-color: #8379DC;
                     clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                    @media screen and (max-width: 768px) {
+                        right: -7%;
+                    }
                 }
             }
 
@@ -164,6 +210,10 @@
                 position: relative;
                 @include flex.flex();
                 @include font.font-Notosan-Medium($fontsize:1.9rem);
+                @media screen and (max-width: 768px) {
+                    width: 37rem;
+                    height: 10rem;
+                }
                 &::after{
                     content: '';
                     position: absolute;
@@ -175,6 +225,9 @@
                     height: 100%;
                     background-color: #7894E0;
                     clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                    @media screen and (max-width: 768px) {
+                        right: -7%;
+                    }
                 }
             }
 
@@ -187,6 +240,10 @@
                 position: relative;
                 @include flex.flex();
                 @include font.font-Notosan-Medium($fontsize:1.9rem);
+                @media screen and (max-width: 768px) {
+                    width: 37rem;
+                    height: 10rem;
+                }
                 &::after{
                     content: '';
                     position: absolute;
@@ -198,6 +255,9 @@
                     height: 100%;
                     background-color: #8379DC;
                     clip-path: polygon(0% 0%, 40% 0%, 100% 50%, 40% 100%, 0% 100%);
+                    @media screen and (max-width: 768px) {
+                        right: -7%;
+                    }
                 }
             }
         }
