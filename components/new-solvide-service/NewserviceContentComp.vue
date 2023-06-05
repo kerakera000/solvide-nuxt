@@ -1,5 +1,5 @@
 <template>
-    <section class="NsContent">
+    <section id="01" class="NsContent">
         <div class="NsContent__box">
             <div class="NsContent__box--text">
                 <h2>
@@ -8,7 +8,7 @@
                 <p>
                     Webサイト制作(5ページ~)
                 </p>
-                <span></span>
+                <span class="span-line"></span>
                 <p class="NsContent-price">
                     <span>¥</span>300,000~
                 </p>
@@ -20,6 +20,8 @@
                 </div>
             </div>
         </div>
+
+        <div id="02"></div>
 
         <div class="NsContent__box img-left">
             <div class="NsContent__box--img2">
@@ -34,13 +36,15 @@
                 <p>
                     LPサイト制作(コーディング、デザイン)
                 </p>
-                <span></span>
+                <span class="span-line"></span>
                 <p class="NsContent-price">
                     <span>¥</span>180,000~
                 </p>
                 <p class="Nscontent-main-text">LPサイトは、オンラインマーケティング戦略の重要な要素であり、ビジネスの成功に欠かせないものです。このサービスは、高品質で使いやすいLPサイトを制作するために、豊富な経験とスキルを持つプロのデザイナーとコーダーが担当します。価格は、プロジェクトの複雑さや作業量によって異なりますが、最低価格は180,000円からとなっています。</p>
             </div>
         </div>
+
+        <div id="03"></div>
 
         <div class="NsContent__box">
             <div class="NsContent__box--text">
@@ -50,7 +54,7 @@
                 <p>
                     ヘッドレスCMS導入
                 </p>
-                <span></span>
+                <span class="span-line"></span>
                 <p class="NsContent-price">
                     <span>¥</span>250,000~
                 </p>
@@ -62,6 +66,8 @@
                 </div>
             </div>
         </div>
+
+        <div id="04"></div>
 
         <div class="NsContent__box img-left">
             <div class="NsContent__box--img2">
@@ -76,7 +82,7 @@
                 <p>
                     サイト保守/運用
                 </p>
-                <span></span>
+                <span class="span-line"></span>
                 <p class="NsContent-price">
                     <span>¥</span>10,000~<span>/月</span>
                 </p>
@@ -90,6 +96,14 @@
 <script>
     export default {
         name: 'NServiceContentComp',
+        methods: {
+            scrollToSpecificId() {
+                const element = document.getElementById('specific-id');
+                if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
     }
 </script>
 

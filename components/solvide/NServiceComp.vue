@@ -10,7 +10,7 @@
 
         <div class="Nservice__cnt">
             <div class="Nservice__cnt--col">
-                <div class="fNservice NewService-img1">
+                <router-link :to="{ path: '/service', hash: '#01' }" class="fNservice NewService-img1">
                     <div class="fNservice__text">
                         <span>01</span>
                         <h3>ORIGINAL<br>WEBSITE PRODUCTION</h3>
@@ -19,9 +19,9 @@
                     <div class="fNservice__button">
                         <button></button>
                     </div>
-                </div>
+                </router-link>
 
-                <div class="fNservice NewService-img2">
+                <router-link :to="{ path: '/service', hash: '#02' }" class="fNservice NewService-img2">
                     <div class="fNservice__text">
                         <span>02</span>
                         <h3>WEBSITE PRODUCTION<br>WITH TEMPLATE DESIGN</h3>
@@ -30,11 +30,11 @@
                     <div class="fNservice__button">
                         <button></button>
                     </div>
-                </div>
+                </router-link>
             </div>
 
             <div class="Nservice__cnt--col">
-                <div class="fNservice NewService-img3">
+                <router-link :to="{ path: '/service', hash: '#03' }" class="fNservice NewService-img3">
                     <div class="fNservice__text">
                         <span>03</span>
                         <h3>INTRODUCTION<br>OF HEADLESS CMS</h3>
@@ -43,9 +43,9 @@
                     <div class="fNservice__button">
                         <button></button>
                     </div>
-                </div>
+                </router-link>
 
-                <div class="fNservice NewService-img4">
+                <router-link :to="{ path: '/service', hash: '#04' }" class="fNservice NewService-img4">
                     <div class="fNservice__text">
                         <span>04</span>
                         <h3>WEBSITE<br>MAINTENANCE/<br class="spbr">OPERATION</h3>
@@ -54,7 +54,7 @@
                     <div class="fNservice__button">
                         <button></button>
                     </div>
-                </div>
+                </router-link>
             </div>
         </div>
 

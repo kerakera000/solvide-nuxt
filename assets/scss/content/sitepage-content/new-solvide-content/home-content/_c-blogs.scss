@@ -17,6 +17,7 @@
         @include title.newtitle($justfit:flex-start,$aligin:flex-start);
         @media screen and (max-width: 768px) {
             width: 90%;
+            margin-top: 20rem;
         }
     }
     &__cnt{
@@ -52,6 +53,13 @@
             height: auto;
             @include flex.flex($align-items:flex-start,$gap:4rem);
             flex-direction: column;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+            &__max{
+                width: 100%;
+                height: auto;
+            }
         }
         &--box{
             width: 100%;
@@ -72,6 +80,7 @@
                 border-radius: 16px;
                 @include flex.flex();
                 gap: 2rem;
+                transition: 0.4s;
                 @media screen and (max-width: 768px) {
                     height: auto;
                     margin-top: 8rem;
@@ -111,6 +120,9 @@
                             font-size: 4rem;
                         }
                     }
+                }
+                &:hover{
+                    transform: scale(1.05);
                 }
             }
         }
