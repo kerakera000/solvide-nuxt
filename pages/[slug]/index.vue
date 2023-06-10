@@ -7,27 +7,31 @@
                 <img :src="article.eyecatch.url" alt="">
             </div>
             <h1>{{article.title}}</h1>
-            <p class="blogslug__main--cate">{{article.category.name}}</p>
-            <div class="blogslug__main--day">
-                <div class="blogslug__main--day--timeicon">
-                    <img src="../../assets/new-solvide-images/icons/blogtimeicon.svg" alt="">
+            <div class="blogslug_main-cate-day-box-sp">
+                <p class="blogslug__main--cate">{{article.category.name}}</p>
+                <div class="blogslug__main--day">
+                    <div class="blogslug__main--day--timeicon">
+                        <img src="../../assets/new-solvide-images/icons/blogtimeicon.svg" alt="">
+                    </div>
+                    <time :datetime="formatDate(article.publishedAt)" v-text="formatDate(article.publishedAt)" />
                 </div>
-                <time :datetime="formatDate(article.publishedAt)" v-text="formatDate(article.publishedAt)" />
             </div>
             <div class="blogslug__main--post" v-html="article.body"></div>
         </div>
 
-        <div class="blogslug__sub">
-            <div v-for="articles in data.contents.filter(item => item.category.name === 'NUXT-blog')" :key="articles.id" class="Nblogs__cnt--box">
-                <nuxt-link :to="`/${articles.id}`" class="Nblogs__cnt--box--blog-col">
-                    <div class="Nblogs-img">
-                        <img :src="articles.eyecatch.url" alt="">
-                    </div>
-                    <div class="Nblogs-text">
-                        <p class="Nblogs-text--day">{{ formatDate(articles.publishedAt) }}</p>
-                        <p>{{ articles.title }}</p>
-                    </div>
-                </nuxt-link>
+        <div class="blogslug__subsp-block">
+            <div class="blogslug__sub">
+                <div v-for="articles in data.contents.filter(item => item.category.name === 'NUXT-blog')" :key="articles.id" class="Nblogs__cnt--box">
+                    <nuxt-link :to="`/${articles.id}`" class="Nblogs__cnt--box--blog-col">
+                        <div class="Nblogs-img">
+                            <img :src="articles.eyecatch.url" alt="">
+                        </div>
+                        <div class="Nblogs-text">
+                            <p class="Nblogs-text--day">{{ formatDate(articles.publishedAt) }}</p>
+                            <p>{{ articles.title }}</p>
+                        </div>
+                    </nuxt-link>
+                </div>
             </div>
         </div>
     </section>

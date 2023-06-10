@@ -1,3 +1,6 @@
+@use "../../../../foundation/mixin/f-flex" as flex;
+@use "../../../../foundation/base/f-font-family" as font;
+
 .Bkvtitle{
     margin-top: 6rem;
     @media screen and (max-width: 768px) {
@@ -6,4 +9,49 @@
 }
 .Bblog{
     padding-top: 12rem;
+}
+.pagenation{
+    @include flex.flex($gap:4rem);
+    margin-bottom: 10rem;
+    .previous{
+        width: 1.8rem;
+        height: 1.8rem;
+        background-image: url(/assets/images/icon/arowviolet.svg);
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        @media screen and (max-width: 768px) {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+    .number{
+        @include flex.flex($gap:1rem);
+        @media screen and (max-width: 768px) {
+            gap: 3rem;
+        }
+        button{
+            @include flex.flex();
+            width: 4rem;
+            height: 4rem;
+            @include font.font-Notosan-Medium($fontsize:2rem);
+            border-radius: 50%;
+            border: 2px solid #C348FA;
+            color: #C348FA;
+            @media screen and (max-width: 768px) {
+                width: 11rem;
+                height: 11rem;
+                font-size: 4.5rem;
+            }
+        }
+    }
+    .nextpage{
+        width: 1.8rem;
+        height: 1.8rem;
+        background-image: url(/assets/images/icon/arowviolet.svg);
+        background-repeat: no-repeat;
+        @media screen and (max-width: 768px) {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
 }

@@ -714,7 +714,8 @@ body {
   height: 100%;
   padding: 0 5rem 0 0;
   position: relative;
-  background: rgba(145, 144, 144, 0.356);
+  background-color: white;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1607843137);
   display: flex;
   gap: 0rem;
   justify-content: center;
@@ -770,8 +771,12 @@ body {
     display: none;
   }
 }
+.Newheader__cnt--box--contact img {
+  width: 3rem;
+  height: 3rem;
+}
 .Newheader__cnt--box--contact .contact-text {
-  color: white;
+  color: rgb(44, 44, 44);
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   letter-spacing: inherit;
@@ -779,12 +784,12 @@ body {
   font-size: 2rem;
 }
 .Newheader__cnt--nav {
-  right: 2%;
+  right: 9%;
   top: 50%;
   transform: translate(0%, -50%);
   position: absolute;
-  height: 8rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 50px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1607843137);
@@ -1218,7 +1223,7 @@ body {
   background-image: url(/assets/images/icon/arowwhite.svg);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: 50%, 50%;
+  background-position: 53%, 50%;
 }
 @media screen and (max-width: 768px) {
   .nkv .main-contact-btn .Mbutton::after {
@@ -1893,7 +1898,7 @@ body {
   background-image: url(/assets/images/icon/arowwhite.svg);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: 50%, 50%;
+  background-position: 53%, 50%;
 }
 @media screen and (max-width: 768px) {
   .Nabout__contact--box--empty .main-contact-btn .Mbutton::after {
@@ -2019,7 +2024,7 @@ body {
   background-image: url(/assets/images/icon/arowwhite.svg);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: 50%, 50%;
+  background-position: 53%, 50%;
 }
 @media screen and (max-width: 768px) {
   .Nabout__contact--box--empty2 .main-contact-btn .Mbutton::after {
@@ -2330,7 +2335,6 @@ body {
 }
 .Nservice__cnt--col .fNservice:hover button {
   background-color: #D16EFD;
-  border: 2px solid white;
   transition: 0.3s;
 }
 .Nservice__cnt--col .fNservice:hover button::after {
@@ -3236,7 +3240,7 @@ body {
   background-image: url(/assets/images/icon/arowwhite.svg);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: 50%, 50%;
+  background-position: 53%, 50%;
 }
 @media screen and (max-width: 768px) {
   .NContact__button .main-contact-btn .Mbutton::after {
@@ -3709,7 +3713,7 @@ body {
   width: 100vw;
   height: auto;
   margin: 0rem calc(50% - 50vw) 0;
-  padding: 0;
+  padding: 20rem 0 0;
   background-color: #F5F5F5;
   display: flex;
   gap: 10rem;
@@ -4466,6 +4470,73 @@ body {
   padding-top: 12rem;
 }
 
+.pagenation {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+.pagenation .previous {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url(/assets/images/icon/arowviolet.svg);
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 768px) {
+  .pagenation .previous {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.pagenation .number {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .pagenation .number {
+    gap: 3rem;
+  }
+}
+.pagenation .number button {
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 2px solid #C348FA;
+  color: #C348FA;
+}
+@media screen and (max-width: 768px) {
+  .pagenation .number button {
+    width: 11rem;
+    height: 11rem;
+    font-size: 4.5rem;
+  }
+}
+.pagenation .nextpage {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url(/assets/images/icon/arowviolet.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .pagenation .nextpage {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
 .Ccontact {
   width: 100%;
   height: auto;
@@ -5171,9 +5242,22 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
+@media screen and (max-width: 768px) {
+  .blogslug {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20% 5rem 5%;
+  }
+}
 .blogslug__main {
   width: 50%;
   padding-top: 4%;
+}
+@media screen and (max-width: 768px) {
+  .blogslug__main {
+    width: 100%;
+  }
 }
 .blogslug__main--kv {
   width: 100%;
@@ -5193,6 +5277,23 @@ body {
   font-size: 4rem;
   color: #333333;
 }
+@media screen and (max-width: 768px) {
+  .blogslug__main h1 {
+    font-size: 6rem;
+  }
+}
+.blogslug__main .blogslug_main-cate-day-box-sp {
+  display: contents;
+}
+@media screen and (max-width: 768px) {
+  .blogslug__main .blogslug_main-cate-day-box-sp {
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+}
 .blogslug__main--cate {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
@@ -5209,6 +5310,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .blogslug__main--cate {
+    width: 22rem;
+    font-size: 3.4rem;
+    padding: 1.5rem;
+  }
+}
 .blogslug__main--day {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
@@ -5222,13 +5330,30 @@ body {
   color: #6b6a6a;
   margin-top: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .blogslug__main--day {
+    gap: 1rem;
+    font-size: 3.5rem;
+  }
+}
 .blogslug__main--day--timeicon {
   width: 2rem;
   height: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .blogslug__main--day--timeicon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .blogslug__main--day--timeicon img {
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .blogslug__main--day time {
+    margin-bottom: 0.5rem;
+  }
 }
 .blogslug__main--post {
   width: 100%;
@@ -5251,12 +5376,19 @@ body {
   gap: 0rem;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 2rem;
   color: rgb(43, 44, 48);
   background-color: rgb(238, 238, 238);
-  height: 7rem;
+  height: auto;
+  padding: 2.5rem;
   margin: 2rem 0;
   border-radius: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .blogslug__main--post h2 {
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+    margin: 3rem 0;
+  }
 }
 .blogslug__main--post p {
   font-family: "Noto Sans JP", sans-serif;
@@ -5266,6 +5398,17 @@ body {
   font-size: 2.2rem;
   color: rgb(43, 44, 48);
 }
+@media screen and (max-width: 768px) {
+  .blogslug__main--post p {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    margin: 3rem 0;
+    line-height: 8rem;
+  }
+}
+.blogslug__main--post p .imgbox {
+  margin: 2rem 0;
+}
 .blogslug__main--post a {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
@@ -5274,6 +5417,26 @@ body {
   font-size: 2.2rem;
   color: rgb(43, 44, 48);
   text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  .blogslug__main--post a {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    margin: 3rem 0;
+    line-height: 8rem;
+  }
+}
+.blogslug .blogslug__subsp-block {
+  display: contents;
+}
+@media screen and (max-width: 768px) {
+  .blogslug .blogslug__subsp-block {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 5rem;
+    overflow-x: scroll;
+  }
 }
 .blogslug__sub {
   width: 23%;
@@ -5290,6 +5453,15 @@ body {
   /*Firefoxへの対応*/
   scrollbar-width: none;
 }
+@media screen and (max-width: 768px) {
+  .blogslug__sub {
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    overflow-y: hidden;
+    padding-top: 0%;
+  }
+}
 .blogslug__sub::-webkit-scrollbar {
   display: none;
 }
@@ -5301,8 +5473,21 @@ body {
   box-shadow: 0px 0px 0px;
   gap: 0.7rem;
 }
+@media screen and (max-width: 768px) {
+  .blogslug__sub .Nblogs__cnt--box--blog-col {
+    width: 80rem;
+    height: 60rem;
+    padding: 0% 10rem 0 0;
+    justify-content: flex-start;
+  }
+}
 .blogslug__sub .Nblogs__cnt--box--blog-col:hover {
   transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+  .blogslug__sub .Nblogs__cnt--box--blog-col:hover {
+    transform: scale(1);
+  }
 }
 .blogslug__sub .Nblogs__cnt--box--blog-col .Nblogs-img {
   width: 100%;
@@ -5311,6 +5496,11 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1019607843);
   border-radius: 1rem;
   transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .blogslug__sub .Nblogs__cnt--box--blog-col .Nblogs-img {
+    height: 37rem;
+  }
 }
 .blogslug__sub .Nblogs__cnt--box--blog-col .Nblogs-img img {
   width: 100%;
@@ -5324,4 +5514,17 @@ body {
 .blogslug__sub .Nblogs__cnt--box--blog-col .Nblogs-text--day {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .blogslug__sub .Nblogs__cnt--box--blog-col .Nblogs-text--day {
+    font-size: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blogslug__sub .Nblogs__cnt--box {
+    width: auto;
+    height: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

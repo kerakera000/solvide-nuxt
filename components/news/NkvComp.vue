@@ -13,32 +13,52 @@
                 <p class="p" @click="handleCategoryClick('news')">ニュース</p>
                 <router-link to="/blog" class="p">ブログ</router-link>
             </div>
-            <div v-show="selectedCategory === '' || selectedCategory === 'all'" class="blogsapibox blogs">
-                <div v-for="article in data.contents" :key="article.id" class="Nblogs__cnt--box">
+
+            <div v-show="selectedCategory === '' || selectedCategory === 'all'" class="blogsapibox all">
+                <div v-for="article in slicedArticlesALL" :key="article.id" class="Nblogs__cnt--box">
                     <nuxt-link :to="`/${article.id}`" class="Nblogs__cnt--box--blog-col">
-                        <div class="Nblogs-img">
-                            <img :src="article.eyecatch.url" alt="">
-                        </div>
-                        <div class="Nblogs-text">
-                            <p class="Nblogs-text--day">{{ formatDate(article.publishedAt) }}</p>
-                            <p>{{ article.title }}</p>
-                        </div>
+                    <div class="Nblogs-img">
+                        <img :src="article.eyecatch.url" alt="">
+                    </div>
+                    <div class="Nblogs-text">
+                        <p class="Nblogs-text--day">{{ formatDate(article.publishedAt) }}</p>
+                        <p>{{ article.title }}</p>
+                    </div>
                     </nuxt-link>
                 </div>
+
+                <div class="pagenation">
+                    <button class="previous" @click="previousPageALL" :disabled="currentPage === 1 || !hasPreviousPageALL"></button>
+                    <div class="number">
+                        <button v-for="page in totalPagesALL" :key="page" @click="setCurrentPageALL(page)" :disabled="currentPageALL === page">{{ page }}</button>
+                    </div>
+                    <button class="nextpage" @click="nextPageALL" :disabled="!hasNextPageALL"></button>
+                </div>
             </div>
+
             <div v-show="selectedCategory === '' || selectedCategory === 'news'" class="blogsapibox news">
-                <div v-for="article in data.contents.filter(item => item.category.name === 'ニュース')" :key="article.id" class="Nblogs__cnt--box">
+                <div v-for="article in slicedArticlesNews" :key="article.id" class="Nblogs__cnt--box">
                     <nuxt-link :to="`/${article.id}`" class="Nblogs__cnt--box--blog-col">
-                        <div class="Nblogs-img">
-                            <img :src="article.eyecatch.url" alt="">
-                        </div>
-                        <div class="Nblogs-text">
-                            <p class="Nblogs-text--day">{{ formatDate(article.publishedAt) }}</p>
-                            <p>{{ article.title }}</p>
-                        </div>
+                    <div class="Nblogs-img">
+                        <img :src="article.eyecatch.url" alt="">
+                    </div>
+                    <div class="Nblogs-text">
+                        <p class="Nblogs-text--day">{{ formatDate(article.publishedAt) }}</p>
+                        <p>{{ article.title }}</p>
+                    </div>
                     </nuxt-link>
                 </div>
+
+                <div class="pagenation">
+                    <button class="previous" @click="previousPageNews" :disabled="currentPage === 1 || !hasPreviousPageALL"></button>
+                    <div class="number">
+                        <button v-for="page in totalPagesNews" :key="page" @click="setCurrentPageALL(page)" :disabled="currentPage === page">{{ page }}</button>
+                    </div>
+                    <button class="nextpage" @click="nextPageNews" :disabled="!hasNextPageALL"></button>
+                </div>
+
             </div>
+
             <div v-show="selectedCategory === '' || selectedCategory === 'blog'" class="blogsapibox blogs">
                 <div v-for="article in data.contents.filter(item => item.category.name === 'NUXT-blog')" :key="article.id" class="Nblogs__cnt--box">
                     <nuxt-link :to="`/${article.id}`" class="Nblogs__cnt--box--blog-col">
@@ -94,7 +114,94 @@
     const { data } = await useFetch(`/blogs`, {
         baseURL: config.baseUrl,
         headers: {
-            "X-MICROCMS-API-KEY": config.apiKey,
+        'X-MICROCMS-API-KEY': config.apiKey,
         },
     });
+</script>
+
+<script>
+
+export default{
+    data() {
+        return {
+            currentPageALL: 1,
+            currentPageNews:1,
+            itemsPerPage: 5
+        };
+    },
+    computed: {
+        //NEWS用のページネーション
+        slicedArticlesNews() {
+            const startIndex = (this.currentPageNews - 1) * this.itemsPerPage;
+            const endIndex = startIndex + this.itemsPerPage;
+
+            return this.data.contents
+            .filter(item => item.category.name === 'ニュース')
+            .slice(startIndex, endIndex);
+        },
+        totalPagesNews() {
+            const totalArticles = this.data.contents.filter(item => item.category.name === 'ニュース').length;
+            return Math.ceil(totalArticles / this.itemsPerPage);
+        },
+        hasNextPageNews() {
+            const startIndex = this.currentPageNews * this.itemsPerPage;
+            return startIndex < this.data.contents.filter(item => item.category.name === 'ニュース').length;
+        },
+        hasPreviousPageNews() {
+            return this.currentPageNews > 1;
+        },
+
+        //ALL用のページネーション
+        slicedArticlesALL() {
+            const startIndex = (this.currentPageALL - 1) * this.itemsPerPage;
+            const endIndex = startIndex + this.itemsPerPage;
+
+            return this.data.contents
+            .filter(item => item.category.name === 'NUXT-blog' || item.category.name === 'ニュース')
+            .slice(startIndex, endIndex);
+        },
+        totalPagesALL() {
+            const totalArticles = this.data.contents.filter(item => item.category.name === 'NUXT-blog' || item.category.name === 'ニュース').length;
+            return Math.ceil(totalArticles / this.itemsPerPage);
+        },
+        hasNextPageALL() {
+            const startIndex = this.currentPageALL * this.itemsPerPage;
+            return startIndex < this.data.contents.filter(item => item.category.name === 'NUXT-blog' || item.category.name === 'ニュース').length;
+        },
+        hasPreviousPageALL() {
+            return this.currentPageALL > 1;
+        },
+    },
+    methods: {
+        // all記事用ページネーション
+        setCurrentPageALL(page) {
+            this.currentPageALL = page;
+        },
+        nextPageALL() {
+            if (this.hasNextPageALL) {
+            this.currentPageALL++;
+            }
+        },
+        previousPageALL() {
+            if (this.hasPreviousPageALL) {
+            this.currentPageALL--;
+            }
+        },
+        //news記事用ページネーション
+        setCurrentPageNews(page) {
+            this.currentPageNews = page;
+        },
+        nextPageNews() {
+            if (this.hasNextPageNews) {
+            this.currentPageNews++;
+            }
+        },
+        previousPageNews() {
+            if (this.hasPreviousPageNews) {
+            this.currentPageNews--;
+            }
+        },
+    }
+}
+
 </script>

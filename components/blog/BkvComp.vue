@@ -27,11 +27,11 @@
                 </div>
 
                 <div class="pagenation">
-                    <button class="previous" @click="previousPageALL" :disabled="currentPage === 1 || !hasPreviousPageALL">Previous</button>
+                    <button class="previous" @click="previousPageALL" :disabled="currentPageALL === 1 || !hasPreviousPageALL"></button>
                     <div class="number">
-                        <button v-for="page in totalPagesALL" :key="page" @click="setCurrentPageALL(page)" :disabled="currentPage === page">{{ page }}</button>
+                        <button v-for="page in totalPagesALL" :key="page" @click="setCurrentPageALL(page)" :disabled="currentPageALL === page">{{ page }}</button>
                     </div>
-                    <button class="nextpage" @click="nextPageALL" :disabled="!hasNextPageALL">Next</button>
+                    <button class="nextpage" @click="nextPageALL" :disabled="!hasNextPageALL"></button>
                 </div>
             </div>
 
@@ -63,11 +63,11 @@
                 </div>
 
                 <div class="pagenation">
-                    <button class="previous" @click="previousPage" :disabled="currentPage === 1 || !hasPreviousPage">Previous</button>
+                    <button class="previous" @click="previousPage" :disabled="currentPage === 1 || !hasPreviousPage"></button>
                     <div class="number">
                         <button v-for="page in totalPages" :key="page" @click="setCurrentPage(page)" :disabled="currentPage === page">{{ page }}</button>
                     </div>
-                    <button class="nextpage" @click="nextPage" :disabled="!hasNextPage">Next</button>
+                    <button class="nextpage" @click="nextPage" :disabled="!hasNextPage"></button>
                 </div>
             </div>
 
@@ -79,6 +79,7 @@
     import { ref } from 'vue';
 
     const selectedCategory = ref('blog'); // 初期値を 'blog' に設定
+    const config = useRuntimeConfig();
 
     const formatDate = (date) => {
         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
@@ -110,9 +111,9 @@
     };
 
     const { data } = await useFetch(`/blogs`, {
-        baseURL: 'https://solvide.microcms.io/api/v1',
+        baseURL: config.baseUrl,
         headers: {
-        'X-MICROCMS-API-KEY': 'A8OTP6XIr8kNjkXW5MENxUSGvneZXO1mfO29',
+        'X-MICROCMS-API-KEY': config.apiKey,
         },
     });
 </script>
@@ -123,9 +124,9 @@
 export default{
     data() {
         return {
-            currentPage: 1,
             currentPageALL: 1,
-            itemsPerPage: 3
+            currentPage: 1,
+            itemsPerPage: 5
         };
     },
     computed: {
@@ -149,56 +150,47 @@ export default{
         hasPreviousPage() {
             return this.currentPage > 1;
         },
+
         //ALL用のページネーション
         slicedArticlesALL() {
-            const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+            const startIndex = (this.currentPageALL - 1) * this.itemsPerPage;
             const endIndex = startIndex + this.itemsPerPage;
 
             return this.data.contents
+            .filter(item => item.category.name === 'NUXT-blog' || item.category.name === 'ニュース')
             .slice(startIndex, endIndex);
         },
         totalPagesALL() {
-            return Math.ceil(this.data.contents.length / this.itemsPerPage);
-        },
-        hasNextPageALL() {
-            const startIndex = this.currentPage * this.itemsPerPage;
-            return startIndex < this.data.contents.length;
-        },
-        hasPreviousPageALL() {
-            return this.currentPage > 1;
-        },
-        //NEWS用のページネーション
-        slicedArticlesNews() {
-            const startIndex = (this.currentPageNews - 1) * this.itemsPerPage;
-            const endIndex = startIndex + this.itemsPerPage;
-
-            return this.data.contents
-            .filter(item => item.category.name === 'ニュース')
-            .slice(startIndex, endIndex);
-        },
-        totalPagesNews() {
-            const totalArticles = this.data.contents.filter(item => item.category.name === 'ニュース').length;
+            const totalArticles = this.data.contents.filter(item => item.category.name === 'NUXT-blog' || item.category.name === 'ニュース').length;
             return Math.ceil(totalArticles / this.itemsPerPage);
         },
-        hasNextPageNews() {
-            const startIndex = this.currentPageNews * this.itemsPerPage;
-            return startIndex < this.data.contents.filter(item => item.category.name === 'ニュース').length;
+        hasNextPageALL() {
+            const startIndex = this.currentPageALL * this.itemsPerPage;
+            return startIndex < this.data.contents.filter(item => item.category.name === 'NUXT-blog' || item.category.name === 'ニュース').length;
         },
-        hasPreviousPageNews() {
-            return this.currentPageNews > 1;
+        hasPreviousPageALL() {
+            return this.currentPageALL > 1;
         },
     },
     methods: {
+        // all記事用ページネーション
         setCurrentPageALL(page) {
-            this.currentPage = page;
+            this.currentPageALL = page;
         },
+        nextPageALL() {
+            if (this.hasNextPageALL) {
+            this.currentPageALL++;
+            }
+        },
+        previousPageALL() {
+            if (this.hasPreviousPageALL) {
+            this.currentPageALL--;
+            }
+        },
+        //blog記事用ページネーション
         setCurrentPage(page) {
             this.currentPage = page;
         },
-        setCurrentPageNews(page) {
-            this.currentPageNews = page;
-        },
-
         nextPage() {
             if (this.hasNextPage) {
             this.currentPage++;
@@ -207,28 +199,6 @@ export default{
         previousPage() {
             if (this.hasPreviousPage) {
             this.currentPage--;
-            }
-        },
-
-        nextPageALL() {
-            if (this.hasNextPageALL) {
-            this.currentPage++;
-            }
-        },
-        previousPageALL() {
-            if (this.hasPreviousPageALL) {
-            this.currentPage--;
-            }
-        },
-
-        nextPageNews() {
-            if (this.hasNextPageNews) {
-            this.currentPageNews++;
-            }
-        },
-        previousPageNews() {
-            if (this.hasPreviousPageNews) {
-            this.currentPageNews--;
             }
         },
     }

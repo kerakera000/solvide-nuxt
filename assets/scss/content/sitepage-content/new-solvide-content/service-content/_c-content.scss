@@ -6,7 +6,7 @@
     width: 100vw;
     height: auto;
     margin: 0rem calc(50% - 50vw) 0;
-    padding: 0;
+    padding: 20rem 0 0;
     background-color: #F5F5F5;
     @include flex.flex($justify-content:flex-start,$gap:10rem,$align-items:flex-end);
     flex-direction: column;

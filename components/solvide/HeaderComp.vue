@@ -4,11 +4,11 @@
             <div class="Newheader__cnt--box">
                 <h1 class="Newheader__cnt--box--title">
                     <router-link to="/" class="title-box">
-                        <img src="../../assets/new-solvide-images/logo-images/NewLogoTW.png" alt="">
+                        <img src="../../assets/new-solvide-images/logo-images/NewLogoblack.png" alt="">
                     </router-link>
                 </h1>
                 <div class="Newheader__cnt--box--contact">
-                    <img src="../../assets/new-solvide-images/home-images/header-images/feather-mail.png" alt="">
+                    <img src="../../assets/new-solvide-images/home-images/header-images/feather-mail.svg" alt="">
                     <router-link to="/contact" class="contact-text">お問い合わせ</router-link>
                 </div>
             </div>
