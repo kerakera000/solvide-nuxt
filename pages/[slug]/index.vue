@@ -49,15 +49,15 @@
     };
 
     const { data: article } = await useFetch(`/blogs/${slug}`, {
-        baseURL: config.baseUrl,
+        baseURL: config.public['baseUrl'],
         headers: {
-            "X-MICROCMS-API-KEY": config.apiKey,
+        'X-MICROCMS-API-KEY': config.public['apiKey'],
         },
     });
     const { data } = await useFetch(`/blogs`, {
-        baseURL: config.baseUrl,
+        baseURL: config.public['baseUrl'],
         headers: {
-            "X-MICROCMS-API-KEY": config.apiKey,
+        'X-MICROCMS-API-KEY': config.public['apiKey'],
         },
     });
 

@@ -1,5 +1,6 @@
 // import { defineNuxtConfig } from "nuxt";
 // import { sortRoutes } from '@nuxt/utils'
+// import dotenv from 'dotenv';
 const { API_KEY, SERVICE_DOMAIN } = process.env;
 
 export default defineNuxtConfig({

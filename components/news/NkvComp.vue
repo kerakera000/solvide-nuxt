@@ -112,9 +112,9 @@
     };
 
     const { data } = await useFetch(`/blogs`, {
-        baseURL: config.baseUrl,
+        baseURL: config.public['baseUrl'],
         headers: {
-        'X-MICROCMS-API-KEY': config.apiKey,
+        'X-MICROCMS-API-KEY': config.public['apiKey'],
         },
     });
 </script>
@@ -126,7 +126,10 @@ export default{
         return {
             currentPageALL: 1,
             currentPageNews:1,
-            itemsPerPage: 5
+            itemsPerPage: 5,
+            data: {
+                contents: [], // 初期値として空の配列を指定する
+            },
         };
     },
     computed: {
